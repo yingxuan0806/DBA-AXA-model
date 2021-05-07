@@ -1,0 +1,15 @@
+Item,Item_Coefficient,Item_Appraisal
+exceptional_items_other,0.5480,0.49
+exchange_gains_ai,2.2182,1.984
+fixed_asset_depreciation,4.3452,3.887
+income_taxes,2.5994,2.325
+intangibles_amortized,4.2820,3.831
+interest_capitalized,3.2824,2.937
+interest_expense_before_tax,4.4850,4.012
+minority_interest,2.8706,2.568
+non_operating_in_x_ot,4.4195,3.954
+non_operating_investment_income,4.1876,3.746
+projected_delta_recurring_earnings_to_price,9.0114,8.062
+sales_cost,4.5500,4.071
+sales_net,4.5697,4.088
+sga_expense,4.3558,3.897

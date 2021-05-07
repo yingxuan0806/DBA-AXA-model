@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+
+    <link rel="stylesheet" type="text/css" href="SelectIndustry.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <link href="semantic/semantic.min.css" type="text/css" rel="stylesheet" />
+    <script src="semantic/semantic.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.ui.search.selection.dropdown').dropdown();
+        });
+    </script>
+
+    <script type="text/javascript" src="http://mbostock.github.com/d3/d3.js">
+    </script>
+
+    <body>
+
+        <img src="DBS/1920px-Flag_of_Singapore.png" style="height:32px">
+
+
+        <svg height="500" width="2000">
+        <!--<line class = "horizontal" x1="0" y1="100" x2="2000" y2="100" style="stroke:#ED553B;stroke-width:1" />
+        <line class = "vertical" x1 = 260 y1="0" x2 = 260 y2="99" style="stroke:#ED553B;stroke-width:1" />-->
+        <rect class = "top" width="2000" height="90" x="-10" y="0" style="fill:#e9edf1"/>
+      </svg>
+
+
+        <h2 id="title"> Please Select Industry</h2>
+
+
+        <select class="ui search selection dropdown height-change" id="selection" onchange="ChangeIndustryList()"> 
+          <option value="">Industry Selected</option> 
+          <option value="Banks">Banks</option> 
+          <option value="Securities brokers & dealers">Securities Brokers & Dealers</option>
+          <option value="Insurance-Casualty & Misc">Insurance-Casualty & Misc</option>
+          <option value="Apparel">Apparel</option>
+          <option value="Leather, Shoes & Luggage">Leather, Shoes & Luggage </option>
+          <option value="Household Items">Household Items</option>
+          <option value="Wholesale Trade-Other">Wholesale Trade-Other</option>
+          <option value="Const,Railroad,Mining Machiner">Const, Railroad, Mining Machiner</option>
+          <option value="Investment Management">Investment Management</option>
+          <option value="Auto Manufacturers">Auto Manufacturers</option>
+          <option value="Trucks & Trailers">Trucks & Trailers</option>
+          <option value="Business Credit">Business Credit</option>
+          <option value="Life Insurance">Life Insurance</option>
+          <option value="Electronic Components">Electronic Components</option>
+          <option value="Textile Mill Products">Textile Mill Products</option>
+          <option value="Cellular Telephone">Cellular Telephone</option>
+          <option value="Cement">Cement</option>
+            
+      </select>
+
+
+        <h4 id="prompt"> Companies </h4>
+
+        <!--<select id="choose company"></select> -->
+        <ul class="tab circle" id="myUl"></ul>
+
+        <script>
+            var IndustryandCompany = {};
+
+            IndustryandCompany['Banks'] = ['DBS', 'OCBC', 'UOB'];
+            IndustryandCompany['Securities brokers & dealers'] = ['DBS', 'UOB'];
+            IndustryandCompany['Insurance-Casualty & Misc'] = ['OCBC']
+
+            function ChangeIndustryList() {
+                var list = document.getElementById("myUl")
+                while (list.hasChildNodes()) {
+                    list.removeChild(list.firstChild);
+                }
+                document.getElementById("prompt").innerHTML = "";
+                var industryList = document.getElementById("selection");
+                var selIndustry = industryList.options[industryList.selectedIndex].value;
+                var industry_array = IndustryandCompany[selIndustry];
+
+                industry_array.forEach(function(item) {
+                    document.getElementById("prompt").innerHTML = "Companies";
+                    var li = document.createElement("li");
+                    var a = document.createElement("a");
+                    var text = document.createTextNode(item);
+
+                    if (selIndustry == "Banks") {
+                        a.setAttribute('href', item + "/" + item + '-bank' + '.html');
+                        a.textContent = item
+                        li.appendChild(a);
+                    }
+
+                    if (selIndustry == "Securities brokers & dealers") {
+                        a.setAttribute('href', "../" + item + "/" + item + '-SBD' + '.html');
+                        a.textContent = item
+                        li.appendChild(a);
+                    }
+
+                    if (selIndustry == "Insurance-Casualty & Misc") {
+                        a.setAttribute('href', "../" + item + "/" + item + '-ICM' + '.html');
+                        a.textContent = item
+                        li.appendChild(a);
+                    }
+
+                    document.getElementById("myUl").appendChild(li);
+                });
+            }
+            //}
+        </script>
+
+        <style type="text/css">
+            ul {
+                list-style: none;
+                padding-left: 0;
+                position: fixed;
+                top: 100px;
+                left: 100px;
+                font: 30px Tahoma;
+                width: 10em
+            }
+            
+            li {
+                margin: 1em 0
+            }
+            
+            a {
+                text-decoration: none;
+                color: rgb(43, 42, 42)
+            }
+            
+            h2 {
+                font: 16px Tahoma;
+                color: black;
+                position: fixed;
+                left: 300px;
+                top: 5px
+            }
+            
+            h4 {
+                font: 25px Tahoma;
+                color: black;
+                position: fixed;
+                left: 100px;
+                top: 3px
+            }
+            
+            img {
+                position: fixed;
+                top: 35px;
+                left: 30px;
+            }
+        </style>
+
+    </body>
+
+</html>

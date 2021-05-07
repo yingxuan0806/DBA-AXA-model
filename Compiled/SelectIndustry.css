@@ -1,0 +1,70 @@
+body {
+    font-family: 'PT Serif', serif;
+    background-color: white
+  }
+
+.ui.search.selection.dropdown{position:fixed;left:290px;top:45px;}
+
+.height-change {
+      min-height: auto !important;
+      height: 1em;
+}
+
+.tab {
+    float: left;
+    background-color: white;
+    left:1px;
+    top:67px;
+    width: 20.4%;
+    height: 510px;
+    }
+
+.tab li {
+    display: block;
+    background-color: white;
+    color: black;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    }
+
+.tab li:hover {
+    background-color: rgb(255, 255, 255);
+    padding: 20px 14px
+    }
+
+.circle{
+    counter-reset: list-counter;
+    list-style: none;
+    float:left;
+}
+.circle li{
+    margin: 1em 0em;
+    font-size: 22px;
+}
+.circle li:before{
+    content: counter(list-counter);
+    counter-increment: list-counter;
+    width: 1em;
+    height: 1em;
+    padding: 0.2em;
+    margin-right: 0.9em;
+    border-radius: 50%;
+    margin-inline-start: 1em;
+    background: rgb(36, 36, 36);
+    color: #fff;
+    font-family: arial;
+    font-size:22px;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+}
+
+
+
+
+  
+  

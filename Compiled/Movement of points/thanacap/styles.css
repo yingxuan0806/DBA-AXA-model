@@ -1,0 +1,409 @@
+.brush .extent {
+    stroke: #fff;
+    fill: steelblue;
+    fill-opacity: .25;
+    shape-rendering: crispEdges;
+}
+  
+rect.mover {
+    stroke: red;
+    stroke-opacity: .1;
+    fill: lightSteelBlue;
+    fill-opacity: .5;
+}
+
+div.tooltip {	
+    position: absolute;			
+    text-align: center;			
+    width: auto;					
+    height: auto;					
+    padding: 5px;				
+    font: 15px sans-serif;		
+    background: lightseagreen;	
+    border: 2px;
+    border-style: solid;		
+    border-radius: 8px;	
+    border-color: black;		
+    pointer-events: none;			
+}
+
+.y-axis {
+    font-size: 15px;
+}
+
+.x-axis {
+    font-size: 12px;
+}
+
+.legend-font{
+    font-size: 13px;
+    font-family: sans-serif;
+    text-anchor: start;
+}
+
+#graph-info {
+  padding: 10px 10px;
+  background: linear-gradient(#d2d7e4, #799eaa, #d2d7e4);
+}
+.chart-title {
+  font-family: 'Raleway', sans-serif;
+  font-size: 40px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+#chart-1 {
+    text-align: center;
+    font-size: 2em;
+    background: #e9edf1;
+    border-radius: 10px;
+}
+
+#graph-2 {
+    text-align: center;
+    font-size: 2em;
+    background: #e9edf1;
+    border-radius: 10px;
+}
+.country {
+    display: flex;
+    font-weight: 500;
+    align-items: center;
+}
+#flag {
+    padding: 5px;
+    width: 100px;
+    height: auto;
+}
+
+.banner-title {
+  font-family: Vollkorn;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.grid line {
+  stroke: lightgrey;
+  stroke-opacity: 0.9;
+  shape-rendering: crispEdges;
+}
+
+.grid path {
+  stroke-width: 0;
+}
+
+/* Company Description Header */
+.container {
+    position: relative;
+    text-align: center;
+    color: black;
+    height: 700px;
+    background-color: black;
+  }
+.bg-image {  
+    /* Add the blur effect */
+    filter: blur(3px);
+    -webkit-filter: blur(3px);
+  
+    /* Full height */
+    height: 100%;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+/* Position text in the middle of the page/image */
+.bg-text {
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.8); /* Black w/opacity/see-through */
+    color: white;
+    font-weight: bold;
+    border: 3px solid #f1f1f1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+  }
+
+.bg-text h2 {
+  font-family: 'Trocchi';
+  font-size: 80px;
+}  
+.bg-text p {
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* Moving Header */
+ /* Style the header */
+ .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:2px 10px;
+    background: #10708e;
+    color: #e9edf1;
+  }
+  
+  /* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%
+  }
+  
+  /* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+    padding-top: 102px;
+  } 
+
+.buttonbox{
+  display: flex;
+  padding: 3px;
+}
+
+.visible-title {
+  visibility: visible;;
+}
+
+.not-visible-title{
+  visibility: hidden;
+}
+
+#site-title {
+    color: yellow;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Buttons */
+.is_button {
+  color: #fff !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #799eaa;
+  padding: 20px;
+  border-radius: 5px;
+  display: inline-block;
+  border: none;
+  transition: all 0.4s ease 0s;
+  }
+.is_button:hover {
+  background: #434343;
+  letter-spacing: 1px;
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+  box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+  transition: all 0.4s ease 0s;
+  }
+
+.oprev_button {
+  color: #fff !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #799eaa;
+  padding: 20px;
+  border-radius: 5px;
+  display: inline-block;
+  border: none;
+  transition: all 0.4s ease 0s;
+  }
+.oprev_button:hover {
+  background: #434343;
+  letter-spacing: 1px;
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+  box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+  transition: all 0.4s ease 0s;
+  }
+    
+.opearn_button {
+  color: #fff !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #799eaa;
+  padding: 20px;
+  border-radius: 5px;
+  display: inline-block;
+  border: none;
+  transition: all 0.4s ease 0s;
+  }
+.opearn_button:hover {
+  background: #434343;
+  letter-spacing: 1px;
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+  box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+  transition: all 0.4s ease 0s;
+  }
+
+.bs_button {
+  color: #fff !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #799eaa;
+  padding: 20px;
+  border-radius: 5px;
+  display: inline-block;
+  border: none;
+  transition: all 0.4s ease 0s;
+  }
+.bs_button:hover {
+  background: #434343;
+  letter-spacing: 1px;
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+  box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+  transition: all 0.4s ease 0s;
+  }
+
+.graph-button {
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 15px;
+  letter-spacing: 2px;
+  position: relative;
+  background-color: #43b13f;
+  border: none;
+  color: #fff;
+  padding: 10px;
+  width: 150px;
+  margin: 10px 10px;
+  text-align: center;
+  transition-duration: 0.4s;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.graph-button:hover {
+  background: #fff;
+  box-shadow: 0px 2px 10px 5px #1abc9c;
+  color: #000;
+}
+
+.graph-button:after {
+  content: "";
+  background: #1abc9c;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+.graph-button:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+
+.graph-button:focus { outline:0; }
+
+/* Summary Button */
+@button-colour: #009ED8;
+@button-text: #ffffff;
+@regular-text: #333;
+@button-tint: fadeout(#000, 90%);
+@background: #303036;
+
+.button {
+	display: inline-block;
+	font-family: "Montserrat", "Trebuchet MS", Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	position: absolute;
+	padding: .8em 1.4em;
+	padding-right: 4.7em;
+	background: #009ED8;
+  border: white;
+  border-width: 2px;
+	color: white;
+  transition: .2s;
+  right: 20px;
+  bottom: 20px;
+  font-size: 20px;
+  opacity: 85%;
+}
+
+.button:before {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		padding-top: inherit;
+    padding-bottom: inherit;
+		width: 2.8em;
+		content: "\00a0";
+		font-family: 'FontAwesome', sans-serif;
+		font-size: 1.2em;
+		text-align: center;
+    opacity: 85%;
+		transition: .2s;
+		transform-origin: 50% 60%;
+  }
+
+.button:after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  padding-top: inherit;
+  padding-bottom: inherit;
+  width: 2.8em;
+  content: "\00a0";
+  font-family: 'FontAwesome', sans-serif;
+  font-size: 1.2em;
+  text-align: center;
+  opacity: 85%;
+  transition: .2s;
+  transform-origin: 50% 60%;
+}
+
+
+.button:hover {
+  opacity: 100%;
+  }
+.button:active{
+  opacity: 100%;
+}
+.button:focus {
+  opacity: 100%;
+	}
+
+.button {
+	min-width: 15em;
+}
+
+.arrow {
+  background: #FE5F55;
+}
+.arrow:hover {
+		background: darken(#FE5F55, 30%);
+	}
+.arrow:active{
+  background: darken(#FE5F55, 30%);
+}
+.arrow:focus {
+		background: darken(#FE5F55, 30%);
+	}
+.arrow:after {
+		content: "\F054";
+	}
+.arrow:hover:after {
+		-webkit-animation: bounceright .3s alternate ease infinite;
+		animation: bounceright .3s alternate ease infinite;
+	}
+
+@keyframes bounceright {
+	from { transform: translateX(0); }
+	to   { transform: translateX(3px); }
+}

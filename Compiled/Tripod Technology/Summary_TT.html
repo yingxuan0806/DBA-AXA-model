@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="UTF-8"/>
+	<title>Tripod Tech valuation</title>
+
+    <script src="https://www.amcharts.com/lib/4/core.js"></script>
+    <script src="https://www.amcharts.com/lib/4/charts.js"></script>
+    <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+    <script src = "../piecharts/pie charts_TT_noanimation.js"></script>
+
+  <script type="text/javascript" src="../bubble-tree/jquery.min.js"></script>
+  <script type="text/javascript" src="../bubble-tree/jquery-migrate.min.js"></script>
+  <script type="text/javascript" src="../bubble-tree/jquery.history.js"></script>
+  <script type="text/javascript" src="../bubble-tree/jquery.tooltip.min.js"></script>
+  <script type="text/javascript" src="../bubble-tree/raphael-min.js"></script>
+  <script type="text/javascript" src="../bubble-tree/Tween.js"></script>
+  <script type="text/javascript" src="../bubble-tree/bubbletree.js"></script>
+  <link rel="stylesheet" type="text/css" href="../bubble-tree/bubbletree.css" />
+  <script type="text/javascript" src="../bubble-tree/cofog.js"></script>
+  
+
+  <script type="text/javascript">
+
+		$(function() {
+            var data = JSON.parse(`{
+                    "label": "Tripod Technology Model Valuation",
+                    "amount": 160.66,
+                    "color": "#261A1F",
+                    "children": [
+                    {
+                        "label": "Balance Sheet Appraisal",
+                        "amount": 132.21,
+                        "color": "#38622F",
+                        "children":[
+                        {
+                            "label": "Balance Sheet Items",
+                            "amount": 4.14,
+                            "color": "#38622F",
+                            "children":[
+                            {
+                                "label": "book_quality_growth",
+                                "amount": 42.26,
+                                "color":"#38622F",
+                                "children":[
+                                {
+                                    "label":"Per Share",
+                                    "amount":"31.27",
+                                    "color":"#2ab038"
+                                },
+                                {
+                                    "label":"Item Appraisal Country adjusted",
+                                    "amount":"1.352",
+                                    "color":"#2ab038"
+                                }   
+                                ]
+                            },
+                            {
+                                "label": "cash",
+                                "amount": 6.98,
+                                "color":"#38622F",
+                                "children":[
+                                {
+                                    "label":"Per Share",
+                                    "amount":"46.44",
+                                    "color":"#2ab038"
+                                },
+                                {
+                                    "label":"Item Appraisal Country adjusted",
+                                    "amount":"0.15",
+                                    "color":"#2ab038"
+                                }   
+                                ]
+                            },
+
+                            {
+                                "label": "cumulative_depreciation",
+                                "amount": 1.77,
+                                "color":"#38622F",
+                                "children":[
+                                {
+                                    "label":"Per Share",
+                                    "amount":"70.33",
+                                    "color":"#2ab038"
+                                },
+                                {
+                                    "label":"Item Appraisal Country adjusted",
+                                    "amount":"0.025",
+                                    "color":"#2ab038"
+                                }   
+                                ]
+                            },
+
+                            {
+                                "label": "accounts_payable_trd",
+                                "amount": 8.52,
+                                "color": "#941A27",
+                                "children":[
+                                {
+                                    "label":"Per Share",
+                                    "amount":"12.17",
+                                    "color":"#38622F"
+                                },
+                                {
+                                    "label":"Item Appraisal Country adjusted",
+                                    "amount":"0.7",
+                                    "color":"#941A27"
+                                }   
+                                ]
+                            },
+
+                            {
+                                "label": "debt_in_current_liability",
+                                "amount": 20.6,
+                                "color": "#941A27",
+                                "children":[
+                                {
+                                    "label":"Per Share",
+                                    "amount":"24.2",
+                                    "color":"#38622F"
+                                },
+                                {
+                                    "label":"Item Appraisal Country adjusted",
+                                    "amount":"0.851",
+                                    "color":"#941A27"
+                                }   
+                                ]
+                            },
+
+                            {
+                                "label": "sundry_current_liability",
+                                "amount": 12.22,
+                                "color": "#941A27",
+                                "children":[{
+                                    "label":"Per Share",
+                                    "amount":"17.3",
+                                    "color":"#38622F"
+                                },
+                                {
+                                    "label":"Item Appraisal Country adjusted",
+                                    "amount":"0.706",
+                                    "color":"#781425"
+                                }   
+                                ]
+                            }
+
+                        ]
+                    },
+                    {
+                        "label": "Contribution by Industry",
+                        "amount": 128.07,
+                        "color": "#38622F",
+                        "children":[
+                        {
+                            "label": "Electronic Components",
+                            "amount": 128.07,
+                            "color":"#2ab038",
+                            "children":[
+                                {
+                                    "label":"Per Share",
+                                    "amount":"125.26",
+                                    "color":"#781425"
+                                },
+                                {
+                                    "label":"Industry Appraisal Country adjusted",
+                                    "amount":"1.022",
+                                    "color":"#781425"
+                                }
+                                ]
+                            }
+                            ]
+                        }
+                        ]
+                    },
+
+                    {
+                        "label": "Income Sheet Contribution",
+                        "amount": 45.45,
+                        "color": "#38622F",
+                        "children": [
+                        {
+                            "label": "Income Sheet Items",
+                            "amount": 88.09,
+                            "color": "#38622F",
+                            "children":[
+                            {
+                                "label": "sales_net",
+                                "amount": 657.42,
+                                "color":"#2ab038",
+                                "children":[
+                                {
+                                    "label":"Per Share",
+                                    "amount":"101.91",
+                                    "color":"#781425"
+                                },
+                                {
+                                    "label":"Item Appraisal Country adjusted",
+                                    "amount":"6.451",
+                                    "color":"#781425"
+                                }
+                                ]
+                            },
+                            {
+                                "label": "non_operating_in_x_ot",
+                                "amount": 9.34,
+                                "color":"#941A27",
+                                "children":[
+                                {
+                                    "label":"Per Share",
+                                    "amount":"1.5",
+                                    "color":"#781425"
+                                },
+                                {
+                                    "label":"Item Appraisal Country adjusted",
+                                    "amount":"6.239",
+                                    "color":"#781425"
+                                }
+                                ]
+                            },
+
+                            {
+                                "label": "non_operating_investment_income",
+                                "amount": 3.15,
+                                "color":"#2ab038",
+                                "children":[
+                                {
+                                    "label":"Per Share",
+                                    "amount":"0.53",
+                                    "color":"#781425"
+                                },
+                                {
+                                    "label":"Item Appraisal Country adjusted",
+                                    "amount":"5.912",
+                                    "color":"#781425"
+                                }
+                                ]
+                            },
+
+                            {
+                                "label": "fixed_asset_depreciation",
+                                "amount": 38.32,
+                                "color": "#941A27",
+                                "children":[
+                                {
+                                    "label":"Per Share",
+                                    "amount":"6.25",
+                                    "color":"#ad2627"
+                                },
+                                {
+                                    "label":"Item Appraisal Country adjusted",
+                                    "amount":"6.134",
+                                    "color":"#2ab038"
+                                }
+                                ]
+
+                            },
+
+                            {
+                                "label": "sales_cost",
+                                "amount": 480.23,
+                                "color": "#941A27",
+                                "children":[
+                                {
+                                    "label":"Per Share",
+                                    "amount":"74.77",
+                                    "color":"#ad2627"
+                                },
+                                {
+                                    "label":"Item Appraisal Country adjusted",
+                                    "amount":"6.423",
+                                    "color":"#2ab038"
+                                }
+                                ]
+                            },
+
+                            {
+                                "label": "sga_expense",
+                                "amount": 50.54,
+                                "color": "#941A27",
+                                "children":[
+                                {
+                                    "label":"Per Share",
+                                    "amount":"8.22",
+                                    "color":"#ad2627"
+                                },
+                                {
+                                    "label":"Item Appraisal Country adjusted",
+                                    "amount":"6.149",
+                                    "color":"#2ab038"
+                                }
+                                ]
+                            }
+                            ]
+                        },
+                        {
+                            "label": "Contribution by Industry",
+                            "amount": "62.57",
+                            "color": "#38622F",
+                            "children":[
+                                {
+                                    "label":"Per Share",
+                                    "amount":"8.22",
+                                    "color":"#ad2627"
+                                },
+                                {
+                                    "label":"Industry Appraisal Country adjusted",
+                                    "amount":"6.149",
+                                    "color":"#2ab038"
+                                }
+                                ]
+                        },
+
+                        {
+                            "label": "Base Line",
+                            "amount": "67.64",
+                            "color": "#941A27"
+                        }
+                        ] 
+
+                    },
+
+                    {
+                        "label": "Unique Earning Contribution",
+                        "amount": 0.53,
+                        "color":"#38622F",
+                        "children": [
+                            {
+                                "label": "Electronic Components",
+                                "amount": 0.53,
+                                "color":"#2ab038",
+                                "children":[
+                                    {
+                                        "label":"Unique value",
+                                        "amount":"6.64",
+                                        "color":"#2ab038"
+                                    },
+                                    {
+                                        "label":"Industry Appraisal Country adjusted",
+                                        "amount":"0.08",
+                                        "color":"#2ab038"
+                                    }
+                                ]
+                            },
+                            {
+                                "label": "Contribution by Items (NIL)",
+                                "amount": 0,
+                                "color":"#A9A9A9"
+                            }     
+                        ]
+                    }
+                    ]
+                }`);
+
+			new BubbleTree({
+				data: data,
+				container: '.bubbletree'
+			});
+
+
+		});
+
+    </script>
+
+    <script>
+        function function_back(){
+            location.href = "../../HeatMap/BSHeatMap.html"
+        }
+    </script>
+
+</head>
+<body>
+
+    <svg height="34" width="1200"> 
+            <circle class = "previouspage" cx="30" cy="17" r="17" onclick = "function_back()"/>
+            <text x="55" y="22" class = "Goback">Main Menu</text>
+            <image class = "previouspage" href = "../back.svg" height="17px"width="17px" x = "20" y = "9" onclick = "function_back()"/>
+    </svg>
+
+    <style type = "text/css">
+        h2{position:fixed; left:1010px; top:50px;font: 20px Tahoma; fill:black}
+        h3{position:fixed; left:1070px; top:86px;font: 20px Tahoma; fill:black}
+        h4{position:fixed; left:1070px; top:120px;font: 20px Tahoma; fill:black}
+        h5{position:fixed; left:1060px; top:-25px;font: 25px Tahoma; fill:black}
+        div.legend {
+            position:fixed;
+            left:1000px;
+            top: 60px;
+            width: 220px;
+            height: 100px;
+            padding: 10px;
+            border: 1px solid gray;
+            margin: 0;
+        }
+        .previouspage{position:fixed;fill:rgb(226, 226, 226);cursor:pointer;}
+        .Goback{position:fixed;font: 16px Tahoma; fill:black}
+        .title{position:fixed;font: 25px Tahoma;fill:black}
+        .dot1 {
+            position:fixed;
+            left:1010px;
+            top:110px;
+            height: 20px;
+            width: 20px;
+            background-color: #ad2627;
+            border-radius: 50%;
+            display: inline-block;
+        }
+        .dot12 {
+            position:fixed;
+            left:1035px;
+            top:110px;
+            height: 20px;
+            width: 20px;
+            background-color: #941A27;
+            border-radius: 50%;
+            display: inline-block;
+        }
+        .dot2 {
+            position:fixed;
+            left:1010px;
+            top:150px;
+            height: 20px;
+            width: 20px;
+            background-color: #2ab038;
+            border-radius: 50%;
+            display: inline-block;
+        }
+        .dot22 {
+            position:fixed;
+            left:1035px;
+            top:150px;
+            height: 20px;
+            width: 20px;
+            background-color: #38622F;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        img{
+            position:fixed;
+            top:15px;
+            left:1000px;
+        }
+    </style>
+        
+        
+    <div class="bubbletree-wrapper">
+        <div class="bubbletree"></div>
+    </div>
+
+    <div id="chartdiv"></div>
+
+    <style>
+        #chartdiv {
+            margin-top:0%;
+            width: 20%;
+            height: 150px;
+        }
+    </style>
+
+    <div class = "legend">
+        <h2> Legend: </h2>
+        <span class="dot1"></span>
+        <span class="dot12"></span>
+        <span class="dot2"></span>
+        <span class="dot22"></span>
+        <h3>Negative Values</h3>
+        <h4>Positive Values</h4>
+        <h5>Tripod Tech</h5>
+    </div>
+
+    <img src = "2000px-Flag_of_the_Republic_of_China.svg.png" style = "height:32px">
+
+    <div id="chartdiv"></div>
+
+    <style>
+        #chartdiv {
+            margin-top:0%;
+            width: 20%;
+            height: 150px;
+        }
+    </style>
+
+
+</body>
+</html>

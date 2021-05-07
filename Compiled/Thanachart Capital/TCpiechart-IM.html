@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <script type="text/javascript" src="http://mbostock.github.com/d3/d3.js" >
+      </script>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+      <link href="../semantic/semantic.min.css" rel="stylesheet"/>
+      <script src="../semantic/semantic.min.js"></script>
+      <script>
+              $(document).ready(function(){
+                  $('.ui.search.selection.dropdown') .dropdown();
+              });
+      </script>
+
+      <link rel="stylesheet" type="text/css" href="TC.css">
+
+      <script src="https://www.amcharts.com/lib/4/core.js"></script>
+      <script src="https://www.amcharts.com/lib/4/charts.js"></script>
+      <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+      <script src = "../piecharts/pie charts_Thanachart.js"></script>
+
+    </head>
+      <body> 
+
+          <img src = "1920px-Flag_of_Thailand.png" style = "height:32px">
+
+          <img class = "nextsymbol" src = "../move-to-the-next-page-symbol.svg" style = "height:16px" onclick = direct();>
+
+          <div id="data_example2">
+
+                  <svg height="500" width="1270">
+                        <rect class = "top" width="2000" height="80" x="0" y="0" style="fill:#e9edf1"/>
+                        <circle class = "circle" id = "myCircle" cx="950" cy="300" r="30" ></circle>
+                        <text x="445" y="168" class="title">Thanachart model valuation</text>
+                        <text x="914" y="273" class="smaller">Thanachart</text>
+                        <text x="905" y="293" class="smaller_2">market valuation</text>
+                        <text x="910" y="330" class="bigger">53.75</text>
+                        <circle class = "previouspage" cx="300" cy="140" r="17" onclick = history.back()></circle>
+                        <text x="325" y="145" class = "Goback">Go back</text>
+                        <text x="1140" y="145" class = "Goback">Next</text>
+                        <circle class = "previouspage" cx="1200" cy="140" r="17" onclick = direct()></circle>
+                        <image class = "previouspage" href = "../back.svg" height="17px"width="17px" x = "290" y = "132" onclick= history.back()/>
+                      </svg>
+  
+            </div>
+
+            <script>
+
+              function direct(){
+                location.href = "../Movement of points/thanacap/thanacap_bs.html"
+              }
+            </script>
+
+            <style>
+                #chartdiv {
+                    margin-top:-27%;
+                    width: 90%;
+                    height: 300px;
+                }
+                
+            </style>
+
+        <div id="chartdiv"></div>
+
+  
+        <h2 id = "title"> Please Select the industry</h2>
+
+        <select class="ui search selection dropdown height-change" id = "selection" onchange="ChangeIndustryList() ; back()"> 
+          <option value="">Industry Selected</option> 
+          <option value="Banks">Banks</option> 
+          <option value="Securities brokers & dealers">Securities brokers & dealers</option>
+          <option value="Insurance-Casualty & Misc">Insurance-Casualty & Misc</option>
+          <option value="Apparel">Apparel</option>
+          <option value="Leather, Shoes & Luggage">Leather, Shoes & Luggage </option>
+          <option value="Household Items">Household Items</option>
+          <option value="Wholesale Trade-Other">Wholesale Trade-Other</option>
+          <option value="Const,Railroad,Mining Machiner">Const,Railroad,Mining Machiner</option>
+          <option value="Investment Management">Investment Management</option>
+          <option value="Auto Manufacturers">Auto Manufacturers</option>
+          <option value="Trucks & Trailers">Trucks & Trailers</option>
+          <option value="Business Credit">Business Credit</option>
+          <option value="Life Insurance">Life Insurance</option>
+          <option value="Electronic Components">Electronic Components</option>
+          <option value="Textile Mill Products">Textile Mill Products</option>
+          <option value="Cellular Telephone">Cellular Telephone</option>
+          <option value="Cement">Cement</option>
+            
+      </select>
+
+            
+              <h4 id = "prompt"> Thanachart </h4>
+   
+              <!--<select id="choose company"></select> -->
+              <ul class = "tab circle" id="myUl">
+                  <li><a href = "../Thanachart Capital/Thanachart Capital-IM.html"> Thanachart Capital </a></li>
+
+              </ul>
+
+              <script>
+                var IndustryandCompany = {};
+
+                IndustryandCompany['Banks'] = ['Thanachart Capital'];
+                IndustryandCompany['Securities brokers & dealers'] = [];
+                IndustryandCompany['Insurance-Casualty & Misc'] = ['Thanachart Capital']
+                IndustryandCompany['Apparel'] = []
+                IndustryandCompany['Leather, Shoes & Luggage'] = []
+                IndustryandCompany['Household Items'] = []
+                IndustryandCompany['Wholesale Trade-Other'] = []
+                IndustryandCompany['Const,Railroad,Mining Machiner'] = []
+                IndustryandCompany['Investment Management'] = ['Thanachart Capital']
+                IndustryandCompany['Auto Manufacturers'] = []
+                IndustryandCompany['Trucks & Trailers'] = []
+                IndustryandCompany['Business Credit'] = []
+                IndustryandCompany['Life Insurance'] = ['Thanachart Capital']
+                IndustryandCompany['Electronic Components'] = []
+                IndustryandCompany['Textile Mill Products'] = []
+                IndustryandCompany['Cellular Telephone'] = []
+                IndustryandCompany['Cement'] = []
+
+                
+                function ChangeIndustryList() {
+                  var list = document.getElementById("myUl")
+                  while (list.hasChildNodes()) {  
+                    list.removeChild(list.firstChild);
+                    }
+                  document.getElementById("prompt").innerHTML = "";
+                  var industryList = document.getElementById("selection");
+                  var selIndustry = industryList.options[industryList.selectedIndex].value;
+                  var industry_array = IndustryandCompany[selIndustry];
+
+                  industry_array.forEach(function(item) {
+                  document.getElementById("prompt").innerHTML = "Companies";
+                  var li = document.createElement("li");
+                  var a = document.createElement("a");
+                  var text = document.createTextNode(item);
+
+                  if (selIndustry == "Banks"){
+                    a.setAttribute('href', "../"+item+"/"+item+'-bank'+'.html');
+                    a.textContent = item
+                    li.appendChild(a);
+                    
+                    }
+                    if (selIndustry == "Wholesale Trade-Other"){
+                    a.setAttribute('href', "../"+item+"/"+item+'-WTO'+'.html');
+                    a.textContent = item
+                    li.appendChild(a);
+                    
+                    }
+                  if (selIndustry == "Securities brokers & dealers"){
+                    a.setAttribute('href', "../"+item+"/"+item+'-SBD'+'.html');
+                    a.textContent = item
+                    li.appendChild(a);
+                    }
+
+                    if (selIndustry == "Insurance-Casualty & Misc"){
+                      a.setAttribute('href', "../"+item+"/"+item+'-ICM'+'.html');
+                      a.textContent = item
+                      li.appendChild(a);
+                      }
+
+                    if (selIndustry == "Apparel"){
+                    a.setAttribute('href', "../"+item+"/"+item+'-apparel'+'.html');
+                    a.textContent = item
+                    li.appendChild(a);
+                    }
+
+                    if (selIndustry == "Leather, Shoes & Luggage"){
+                    a.setAttribute('href', "../"+item+"/"+item+'-LSL'+'.html');
+                    a.textContent = item
+                    li.appendChild(a);
+                    }
+
+                    if (selIndustry == "Household Items"){
+                    a.setAttribute('href', "../"+item+"/"+item+'-HI'+'.html');
+                    a.textContent = item
+                    li.appendChild(a);
+                    }
+
+                    if (selIndustry == "Life Insurance"){
+                    a.setAttribute('href', "../"+item+"/"+item+'-LI'+'.html');
+                    a.textContent = item
+                    li.appendChild(a);
+                    }
+
+                    if (selIndustry == "Const,Railroad,Mining Machiner"){
+                    a.setAttribute('href', "../"+item+"/"+item+'-CRMM'+'.html');
+                    a.textContent = item
+                    li.appendChild(a);
+                    }
+
+                    if (selIndustry == "Investment Management"){
+                    a.setAttribute('href', "../"+item+"/"+item+'-IM'+'.html');
+                    a.textContent = item
+                    li.appendChild(a);
+                    }
+
+                    if (selIndustry == "Auto Manufacturers"){
+                    a.setAttribute('href', "../"+item+"/"+item+'-AM'+'.html');
+                    a.textContent = item
+                    li.appendChild(a);
+                    }
+
+                    if (selIndustry == "Trucks & Trailers"){
+                    a.setAttribute('href', "../"+item+"/"+item+'-TT'+'.html');
+                    a.textContent = item
+                    li.appendChild(a);
+                    }
+
+                    if (selIndustry == "Business Credit"){
+                    a.setAttribute('href', "../"+item+"/"+item+'-BC'+'.html');
+                    a.textContent = item
+                    li.appendChild(a);
+                    }
+
+                    if (selIndustry == "Electronic Components"){
+                    a.setAttribute('href', "../"+item+"/"+item+'-EC'+'.html');
+                    a.textContent = item
+                    li.appendChild(a);
+                    }
+
+                    if (selIndustry == "Textile Mill Products"){
+                    a.setAttribute('href', "../"+item+"/"+item+'-TMP'+'.html');
+                    a.textContent = item
+                    li.appendChild(a);
+                    }
+
+                    if (selIndustry == "Cellular Telephone"){
+                    a.setAttribute('href', "../"+item+"/"+item+'-Cell'+'.html');
+                    a.textContent = item
+                    li.appendChild(a);
+                    }
+
+                    if (selIndustry == "Cement"){
+                    a.setAttribute('href', "../"+item+"/"+item+'-Cement'+'.html');
+                    a.textContent = item
+                    li.appendChild(a);
+                    }
+                  document.getElementById("myUl").appendChild(li);
+                });
+                }
+
+                function back(){
+                    $("svg").find("*").not("rect").remove();
+                    $("#bottomNavBar").html("");
+                  }
+              </script> 
+
+              <style type="text/css">
+                ul {
+                list-style: none;
+                padding-left:0;
+                position:fixed;
+                top:100px;
+                left:100px;
+                font: 30px Tahoma;
+                width: 10em
+                }
+                li{margin: 1em 0}
+                a{text-decoration:none; color:rgb(43, 42, 42)}
+                h2{font: 16px Tahoma; color:black;position:fixed;left:300px;top:0}
+                select{position:fixed;width:350px; height:40px; left:300px; top:40px}
+                h4{font: 25px Tahoma; color:black;position:fixed;left:90px;top:-2px}
+              </style>
+
+            <div class="navbar tooltip" id="bottomNavBar">
+                    <a href="#">Balance Sheet 
+                    <span class="tooltiptext_1">Contribution:<br>84.34</br></span>
+                    </a>
+                    <a href="#">Income Statement
+                        <span class="tooltiptext_2">Contribution:<br>27.81</br></span>
+                    </a>
+                    <a href="#">Unique Revenues
+                        <span class="tooltiptext_3">Contribution:<br>0.03</br></span>
+                    </a>
+                    <a href="#">Unique Operating Earnings
+                        <span class="tooltiptext_4">Contribution:<br>6.43</br></span>
+                    </a>
+                </div>
+
+        <style type = "text/css">
+            .circle:hover{
+                stroke:#26a9e0;
+                stroke-width:4px
+            }
+            .small{position:fixed; font: italic 15px Arial; fill:white;}
+            .big{position:fixed; font: italic 50px Arial; fill:white;}
+            .smaller{position:fixed; font: italic 14px Arial; fill:white;}
+            .smaller_2{position:fixed;font: italic 13px Arial; fill:white;}
+            .bigger{position:fixed;font: italic 30px Arial; fill:white;}
+            .previouspage{position:fixed;fill:rgb(226, 226, 226);cursor:pointer;}
+            .Goback{position:fixed;font: 16px Tahoma; fill:black}
+            .title{position:fixed; font: 20px Tahoma; fill:black;}
+            img.nextsymbol{position:fixed;left:1200px;top:140px}
+        </style>
+      
+      <script type="text/javascript">
+	  
+	  //radiusData is an array containing the new radius for the circle elements //1 is 100, the other is 70
+      circleData = [[53.75*1, "#10708e"]];
+	  
+      //Select the div element
+      selectExample = d3.select("#data_example2");
+	  
+      //We'll select all the circle from within the selected <div> element
+      selectExample.selectAll("circle")
+        .data(circleData)
+        .attr("r", function(d){return d[0]})
+        .style("fill", function(d){return d[1]});
+      </script>
+    </body>
+  </html>

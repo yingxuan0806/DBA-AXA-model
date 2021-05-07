@@ -1,0 +1,138 @@
+[
+  {
+    "ADJUSTMENTS FOR CO FUNDAMENTALS": "cash",
+    "Contribution": 0.274
+  },
+  {
+    "ADJUSTMENTS FOR CO FUNDAMENTALS": "government_security",
+    "Contribution": 0.255
+  },
+  {
+    "ADJUSTMENTS FOR CO FUNDAMENTALS": "other_security",
+    "Contribution": -1.025
+  },
+  {
+    "ADJUSTMENTS FOR CO FUNDAMENTALS": "plant_net",
+    "Contribution": -0.04
+  },
+  {
+    "ADJUSTMENTS FOR CO FUNDAMENTALS": "loans_consumer",
+    "Contribution": -0.039
+  },
+  {
+    "ADJUSTMENTS FOR CO FUNDAMENTALS": "loans_commercial",
+    "Contribution": -0.31
+  },
+  {
+    "ADJUSTMENTS FOR CO FUNDAMENTALS": "loans_mortgage",
+    "Contribution": 0.245
+  },
+  {
+    "ADJUSTMENTS FOR CO FUNDAMENTALS": "loans_other",
+    "Contribution": -0.364
+  },
+  {
+    "ADJUSTMENTS FOR CO FUNDAMENTALS": "loan_loss_reserve_asset",
+    "Contribution": -0.004
+  },
+  {
+    "ADJUSTMENTS FOR CO FUNDAMENTALS": "non_performing_assets",
+    "Contribution": -0.23
+  },
+  {
+    "ADJUSTMENTS FOR CO FUNDAMENTALS": "invest_property",
+    "Contribution": 0
+  },
+  {
+    "ADJUSTMENTS FOR CO FUNDAMENTALS": "investment_in_subsidiaries_securities",
+    "Contribution": 0.007
+  },
+  {
+    "ADJUSTMENTS FOR CO FUNDAMENTALS": "other_intangibles",
+    "Contribution": -0.185
+  },
+  {
+    "ADJUSTMENTS FOR CO FUNDAMENTALS": "assets_sundry",
+    "Contribution": -0.065
+  },
+  {
+    "ADJUSTMENTS FOR CO FUNDAMENTALS": "intermediation",
+    "Contribution": -1.181
+  },
+  {
+    "ADJUSTMENTS FOR CO FUNDAMENTALS": "special_items_history",
+    "Contribution": 0.007
+  },
+  {
+    "ADJUSTMENTS FOR CO FUNDAMENTALS": "extraordinary_items_hist",
+    "Contribution": 0
+  },
+  {
+    "ADJUSTMENTS FOR CO FUNDAMENTALS": "deposits_demand",
+    "Contribution": -1.145
+  },
+  {
+    "ADJUSTMENTS FOR CO FUNDAMENTALS": "deposits_savings",
+    "Contribution": -3.724
+  },
+  {
+    "ADJUSTMENTS FOR CO FUNDAMENTALS": "debt_in_current_liability",
+    "Contribution": -9.14
+  },
+  {
+    "ADJUSTMENTS FOR CO FUNDAMENTALS": "income_tax_payable",
+    "Contribution": -0.207
+  },
+  {
+    "ADJUSTMENTS FOR CO FUNDAMENTALS": "provisional_other",
+    "Contribution": -0.087
+  },
+  {
+    "ADJUSTMENTS FOR CO FUNDAMENTALS": "sundry_long_term_liabilities",
+    "Contribution": -0.446
+  },
+  {
+    "ADJUSTMENTS FOR CO FUNDAMENTALS": "debt_other_longterm",
+    "Contribution": -5.644
+  },
+  {
+    "ADJUSTMENTS FOR CO FUNDAMENTALS": "deferred_tax_liability",
+    "Contribution": 0.046
+  },
+  {
+    "ADJUSTMENTS FOR CO FUNDAMENTALS": "minority_interest_bs",
+    "Contribution": -0.281
+  },
+  {
+    "ADJUSTMENTS FOR CO FUNDAMENTALS": "ordinary_capt_book",
+    "Contribution": 0.122
+  },
+  {
+    "ADJUSTMENTS FOR CO FUNDAMENTALS": "treasury_stock_lb",
+    "Contribution": 0
+  },
+  {
+    "ADJUSTMENTS FOR CO FUNDAMENTALS": "retained_earnings",
+    "Contribution": 0.193
+  },
+  {
+    "ADJUSTMENTS FOR CO FUNDAMENTALS": "unrealized_gain",
+    "Contribution": 0.02
+  },
+  {
+    "ADJUSTMENTS FOR CO FUNDAMENTALS": "equity_reserves_other",
+    "Contribution": -0.002
+  },
+  {
+    "ADJUSTMENTS FOR CO FUNDAMENTALS": "book_earnings_xtrp",
+    "Contribution": 0.464
+  },
+  {
+    "ADJUSTMENTS FOR CO FUNDAMENTALS": "book_dividend_xtrp",
+    "Contribution": -0.217
+  },
+  {
+    "ADJUSTMENTS FOR CO FUNDAMENTALS": "book_quality_growth",
+    "Contribution": 10.517
+  }
+]

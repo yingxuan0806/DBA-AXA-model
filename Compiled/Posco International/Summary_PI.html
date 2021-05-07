@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="UTF-8"/>
+	<title>Posco International valuation</title>
+
+    <script src="https://www.amcharts.com/lib/4/core.js"></script>
+    <script src="https://www.amcharts.com/lib/4/charts.js"></script>
+    <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+    <script src = "../piecharts/pie charts_PI_noanimation.js"></script>
+
+  <script type="text/javascript" src="../bubble-tree/jquery.min.js"></script>
+  <script type="text/javascript" src="../bubble-tree/jquery-migrate.min.js"></script>
+  <script type="text/javascript" src="../bubble-tree/jquery.history.js"></script>
+  <script type="text/javascript" src="../bubble-tree/jquery.tooltip.min.js"></script>
+  <script type="text/javascript" src="../bubble-tree/raphael-min.js"></script>
+  <script type="text/javascript" src="../bubble-tree/Tween.js"></script>
+  <script type="text/javascript" src="../bubble-tree/bubbletree.js"></script>
+  <link rel="stylesheet" type="text/css" href="../bubble-tree/bubbletree.css" />
+  <script type="text/javascript" src="../bubble-tree/cofog.js"></script>
+  
+
+  <script type="text/javascript">
+
+		$(function() {
+            var data = JSON.parse(`{
+                    "label": "Posco International Model valuation",
+                    "amount": 41493,
+                    "color": "#261A1F",
+                    "children": [
+                    {
+                        "label": "Balance Sheet Appraisal",
+                        "amount": 25206,
+                        "color": "#38622F",
+                        "children":[
+                            {
+                                "label": "Balance Sheet Items",
+                                "amount": 28598,
+                                "color": "#941A27",
+                                "children":[
+                                {
+                                    "label": "book_earnings_xtrp",
+                                    "amount": 626,
+                                    "color":"#38622F",
+                                    "children":[
+                                    {
+                                        "label":"Per Share",
+                                        "amount":"1097",
+                                        "color":"#2ab038"
+                                    },
+                                    {
+                                        "label":"Item Appraisal Country adjusted",
+                                        "amount":"0.571",
+                                        "color":"#2ab038"
+                                    }   
+                                    ]
+                                },
+                                {
+                                    "label": "cash",
+                                    "amount": 302,
+                                    "color":"#38622F",
+                                    "children":[
+                                    {
+                                        "label":"Per Share",
+                                        "amount":"3249",
+                                        "color":"#2ab038"
+                                    },
+                                    {
+                                        "label":"Item Appraisal Country adjusted",
+                                        "amount":"0.093",
+                                        "color":"#2ab038"
+                                    }   
+                                    ]
+                                },
+
+                                {
+                                    "label": "deferred_tax_liability",
+                                    "amount": 581,
+                                    "color":"#38622F",
+                                    "children":[
+                                    {
+                                        "label":"Per Share",
+                                        "amount":"1922",
+                                        "color":"#941A27"
+                                    },
+                                    {
+                                        "label":"Item Appraisal Country adjusted",
+                                        "amount":"0.302",
+                                        "color":"#941A27"
+                                    }   
+                                    ]
+                                },
+
+                                {
+                                    "label": "accounts_payable_trd",
+                                    "amount": 7179,
+                                    "color": "#941A27",
+                                    "children":[
+                                    {
+                                        "label":"Per Share",
+                                        "amount":"16597",
+                                        "color":"#38622F"
+                                    },
+                                    {
+                                        "label":"Item Appraisal Country adjusted",
+                                        "amount":"0.433",
+                                        "color":"#941A27"
+                                    }   
+                                    ]
+                                },
+
+                                {
+                                    "label": "debt_other_longterm",
+                                    "amount": 8258,
+                                    "color": "#941A27",
+                                    "children":[
+                                    {
+                                        "label":"Per Share",
+                                        "amount":"16196",
+                                        "color":"#38622F"
+                                    },
+                                    {
+                                        "label":"Item Appraisal Country adjusted",
+                                        "amount":"0.51",
+                                        "color":"#941A27"
+                                    }   
+                                    ]
+                                },
+
+                                {
+                                    "label": "debt_in_current_liability",
+                                    "amount": 8248,
+                                    "color": "#941A27",
+                                    "children":[{
+                                        "label":"Per Share",
+                                        "amount":"15675",
+                                        "color":"#38622F"
+                                    },
+                                    {
+                                        "label":"Item Appraisal Country adjusted",
+                                        "amount":"0.526",
+                                        "color":"#781425"
+                                    }   
+                                    ]
+                                }
+                            ]
+                    },
+                    {
+                        "label": "Contribution by Industry",
+                        "amount": 53803,
+                        "color": "#38622F",
+                        "children":[
+                        {
+                            "label": "Textile Mill Products",
+                            "amount": 4089,
+                            "color":"#2ab038",
+                            "children":[
+                                {
+                                    "label":"Per Share",
+                                    "amount":"7297",
+                                    "color":"#2ab038"
+                                },
+                                {
+                                    "label":"Industry Appraisal Country adjusted",
+                                    "amount":"0.56",
+                                    "color":"#2ab038"
+                                }
+                                ]
+                        },
+                        {
+                            "label": "Wholesale Trade-Other",
+                            "amount": 49714,
+                            "color":"#2ab038",
+                            "children":[
+                                {
+                                    "label":"Per Share",
+                                    "amount":"71260",
+                                    "color":"#2ab038"
+                                },
+                                {
+                                    "label":"Industry Appraisal Country adjusted",
+                                    "amount":"0.698",
+                                    "color":"#2ab038"
+                                }
+                                ]
+                            }
+                            ]
+                        }
+                        ]
+                    },
+
+                    {
+                        "label": "Income Sheet contribution",
+                        "amount": 13598,
+                        "color": "#941A27",
+                        "children": [
+                        {
+                            "label": "Income Sheet Items",
+                            "amount": 19910,
+                            "color": "#38622F",
+                            "children":[
+                            {
+                                "label": "sales_net",
+                                "amount": 842345,
+                                "color":"#2ab038",
+                                "children":[
+                                {
+                                    "label":"Per Share",
+                                    "amount":"206047",
+                                    "color":"#781425"
+                                },
+                                {
+                                    "label":"Item Appraisal Country adjusted",
+                                    "amount":"4.088",
+                                    "color":"#781425"
+                                }
+                                ]
+                            },
+                            {
+                                "label": "projected_delta_recurring_earnings_to_price",
+                                "amount": 4688,
+                                "color":"#941A27",
+                                "children":[
+                                {
+                                    "label":"Per Share",
+                                    "amount":"582",
+                                    "color":"#ad2627"
+                                },
+                                {
+                                    "label":"Item Appraisal Country adjusted",
+                                    "amount":"8.062",
+                                    "color":"#781425"
+                                }
+                                ]
+                            },
+
+                            {
+                                "label": "non_operating_investment_income",
+                                "amount": 1094,
+                                "color":"#2ab038",
+                                "children":[
+                                {
+                                    "label":"Per Share",
+                                    "amount":"292",
+                                    "color":"#781425"
+                                },
+                                {
+                                    "label":"Item Appraisal Country adjusted",
+                                    "amount":"3.746",
+                                    "color":"#781425"
+                                }
+                                ]
+                            },
+
+                            {
+                                "label": "interest_expense_before_tax",
+                                "amount": 5276,
+                                "color": "#941A27",
+                                "children":[
+                                {
+                                    "label":"Per Share",
+                                    "amount":"1315",
+                                    "color":"#ad2627"
+                                },
+                                {
+                                    "label":"Item Appraisal Country adjusted",
+                                    "amount":"4.012",
+                                    "color":"#2ab038"
+                                }
+                                ]
+
+                            },
+
+                            {
+                                "label": "sales_cost",
+                                "amount": 804425,
+                                "color": "#941A27",
+                                "children":[
+                                {
+                                    "label":"Per Share",
+                                    "amount":"197621",
+                                    "color":"#ad2627"
+                                },
+                                {
+                                    "label":"Item Appraisal Country adjusted",
+                                    "amount":"4.071",
+                                    "color":"#2ab038"
+                                }
+                                ]
+                            },
+
+                            {
+                                "label": "sga_expense",
+                                "amount": 9244,
+                                "color": "#941A27",
+                                "children":[
+                                {
+                                    "label":"Per Share",
+                                    "amount":"2372",
+                                    "color":"#ad2627"
+                                },
+                                {
+                                    "label":"Item Appraisal Country adjusted",
+                                    "amount":"3.897",
+                                    "color":"#2ab038"
+                                }
+                                ]
+                            }
+                            ]
+                        },
+                        {
+                            "label": "Contribution by Industry",
+                            "amount": "26759",
+                            "color": "#38622F",
+                            "children":[
+                            {
+                                "label": "Textile Mill Products",
+                                "amount": 1865,
+                                "color":"#2ab038",
+                                "children":[
+                                {
+                                    "label":"Per Share",
+                                    "amount":"7297",
+                                    "color":"#2ab038"
+                                },
+                                {
+                                    "label":"Industry Appraisal Country adjusted",
+                                    "amount":"0.256",
+                                    "color":"#2ab038"
+                                }
+                                ]
+                            },
+                            {
+                                "label": "Wholesale Trade-Other",
+                                "amount": 5961,
+                                "color":"#2ab038",
+                                "children":[
+                                {
+                                    "label":"Per Share",
+                                    "amount":"71260",
+                                    "color":"#2ab038"
+                                },
+                                {
+                                    "label":"Industry Appraisal Country adjusted",
+                                    "amount":"0.349",
+                                    "color":"#2ab038"
+                                }
+                                ]
+                            }
+                            ]
+                        },
+
+                        {
+                            "label": "Base Line",
+                            "amount": "12.613",
+                            "color": "#941A27"
+                        }
+
+                        ] 
+
+                    },
+
+                    {
+                        "label": "Unique Revenue Contribution",
+                        "amount":22113,
+                        "color":"#38622F",
+                        "children":[
+                            {
+                                "label": "Contribution by Industry",
+                                "amount": 22113,
+                                "color":"#38622F",
+                                "children":[
+                                {
+                                    "label": "Textile Mill Products",
+                                    "amount": 951,
+                                    "color":"#941A27",
+                                    "children":[
+                                    {
+                                        "label":"Unique value",
+                                        "amount":"3867",
+                                        "color":"#ad2627"
+                                    },
+                                    {
+                                        "label":"Industry Appraisal Country adjusted",
+                                        "amount":"0.246",
+                                        "color":"#2ab038"
+                                    }
+                                    ]
+                                },
+                                {
+                                    "label": "Wholesale Trade-Other",
+                                    "amount": 23064,
+                                    "color":"#2ab038",
+                                    "children":[
+                                    {
+                                        "label":"Unique value",
+                                        "amount":"128768",
+                                        "color":"#2ab038"
+                                    },
+                                    {
+                                        "label":"Industry Appraisal Country adjusted",
+                                        "amount":"0.179",
+                                        "color":"#2ab038"
+                                    }
+                                    ]
+                                }
+                                ]
+
+                            },
+                            {
+                                "label": "Contribution by Items (NIL)",
+                                "amount": 0,
+                                "color":"#A9A9A9"
+                            }
+                            ]
+                    },
+
+                    {
+                        "label": "Unique Earning Contribution",
+                        "amount": 1184,
+                        "color":"#38622F",
+                        "children": [
+                            {
+                                "label": "Contribution by Industry",
+                                "amount": 1184,
+                                "color":"#38622F",
+                                "children":[
+                                    {
+                                        "label": "Textile Mill Products",
+                                        "amount": 883,
+                                        "color":"#2ab038",
+                                        "children":[
+                                        {
+                                            "label":"Unique value",
+                                            "amount":"1273",
+                                            "color":"#2ab038"
+                                        },
+                                        {
+                                            "label":"Industry Appraisal Country adjusted",
+                                            "amount":"0.694",
+                                            "color":"#2ab038"
+                                        }
+                                        ]
+                                    
+                                    },
+                                    {
+                                        "label": "Wholesale Trade-Other",
+                                        "amount": 301,
+                                        "color":"#2ab038",
+                                        "children":[
+                                        {
+                                            "label":"Unique value",
+                                            "amount":"262",
+                                            "color":"#2ab038"
+                                        },
+                                        {
+                                            "label":"Industry Appraisal Country adjusted",
+                                            "amount":"1.148",
+                                            "color":"#2ab038"
+                                        }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "label": "Contribution by Items (NIL)",
+                                "amount": 0,
+                                "color":"#A9A9A9"
+                            }
+                        ]
+                    }   
+                    ]
+                }`);
+
+			new BubbleTree({
+				data: data,
+				container: '.bubbletree'
+			});
+
+
+		});
+
+    </script>
+
+    <script>
+        function function_back(){
+            location.href = "../../HeatMap/BSHeatMap.html"
+        }
+    </script>
+
+</head>
+<body>
+
+    <svg height="34" width="1200"> 
+            <circle class = "previouspage" cx="30" cy="17" r="17" onclick = "function_back()"/>
+            <text x="55" y="22" class = "Goback">Main Menu</text>
+            <image class = "previouspage" href = "../back.svg" height="17px"width="17px" x = "20" y = "10" onclick = "function_back()"/>
+    </svg>
+
+    <style type = "text/css">
+        h2{position:fixed; left:1010px; top:50px;font: 20px Tahoma; fill:black}
+        h3{position:fixed; left:1070px; top:86px;font: 20px Tahoma; fill:black}
+        h4{position:fixed; left:1070px; top:120px;font: 20px Tahoma; fill:black}
+        h5{position:fixed; left:1060px; top:-25px;font: 25px Tahoma; fill:black}
+        div.legend {
+            position:fixed;
+            left:1000px;
+            top: 60px;
+            width: 220px;
+            height: 100px;
+            padding: 10px;
+            border: 1px solid gray;
+            margin: 0;
+        }
+        .previouspage{position:fixed;fill:rgb(226, 226, 226);cursor:pointer;}
+        .Goback{position:fixed;font: 16px Tahoma; fill:black}
+        .title{position:fixed;font: 25px Tahoma;fill:black}
+        .dot1 {
+            position:fixed;
+            left:1010px;
+            top:110px;
+            height: 20px;
+            width: 20px;
+            background-color: #ad2627;
+            border-radius: 50%;
+            display: inline-block;
+        }
+        .dot12 {
+            position:fixed;
+            left:1035px;
+            top:110px;
+            height: 20px;
+            width: 20px;
+            background-color: #941A27;
+            border-radius: 50%;
+            display: inline-block;
+        }
+        .dot2 {
+            position:fixed;
+            left:1010px;
+            top:150px;
+            height: 20px;
+            width: 20px;
+            background-color: #2ab038;
+            border-radius: 50%;
+            display: inline-block;
+        }
+        .dot22 {
+            position:fixed;
+            left:1035px;
+            top:150px;
+            height: 20px;
+            width: 20px;
+            background-color: #38622F;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        img{
+            position:fixed;
+            top:15px;
+            left:1000px;
+        }
+    </style>
+        
+        
+    <div class="bubbletree-wrapper">
+        <div class="bubbletree"></div>
+    </div>
+
+    <div id="chartdiv"></div>
+
+    <style>
+        #chartdiv {
+            margin-top:0%;
+            width: 20%;
+            height: 150px;
+        }
+    </style>
+
+    <div class = "legend">
+        <h2> Legend: </h2>
+        <span class="dot1"></span>
+        <span class="dot12"></span>
+        <span class="dot2"></span>
+        <span class="dot22"></span>
+        <h3>Negative Values</h3>
+        <h4>Positive Values</h4>
+        <h5>Posco Int</h5>
+    </div>
+
+    <img src = "Flag_of_South_Korea.png" style = "height:32px">
+
+    <div id="chartdiv"></div>
+
+    <style>
+        #chartdiv {
+            margin-top:0%;
+            width: 20%;
+            height: 150px;
+        }
+    </style>
+
+
+</body>
+</html>

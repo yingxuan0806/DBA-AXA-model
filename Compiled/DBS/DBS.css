@@ -1,0 +1,254 @@
+body {
+    font-family: 'PT Serif', serif;
+    background-color: white
+  }
+
+.button {
+    position:fixed;
+    left:1100px;
+    top: 120px;
+    background-color: #799eaa; /* Green */
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    width:130px;
+    height:57px;
+    cursor: pointer;
+}
+
+.button4 {border-radius: 12px;}
+
+img{
+    position:fixed;
+    top:30px;
+    left:30px;
+}
+
+.ui.search.selection.dropdown{position:fixed;left:290px;top:40px;}
+
+.height-change {
+    min-height: auto !important;
+    height: 0.8em;
+}
+/* Bottom navigation bar */
+
+.navbar {
+    background-color: #d2d7e4;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left:268px;
+    font-family: Tahoma;
+}
+
+
+/* Style the links inside the navigation bar */
+
+.navbar a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    font-size: 17px;
+    border-right: 1px solid rgb(230, 230, 230);
+    text-decoration: none;
+    width:220px
+}
+
+
+/* Change color of links on hover */
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+
+.tooltip {
+    display: inline-block;
+    overflow: visible;
+  }
+
+
+.tooltip a .tooltiptext_1 {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 7px 0;
+    position: absolute;
+    z-index: 1;
+    top:-60px;
+    left:60px;
+}
+
+.tooltip a:hover .tooltiptext_1 {
+    visibility: visible;
+}
+
+.tooltip .tooltiptext_1::after {
+    content: " ";
+    position: absolute;
+    top: 100%; /* This will position the arrow at the bottom of the tooltip */
+    left: 50%;
+    margin-left: -10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: black transparent transparent transparent; /* This will make the top border black*/
+}
+
+
+
+.tooltip a .tooltiptext_2 {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 7px 0;
+    position: absolute;
+    z-index: 1;
+    top:-60px;
+    left:316px;
+}
+
+.tooltip a:hover .tooltiptext_2 {
+    visibility: visible;
+}
+
+.tooltip .tooltiptext_2::after {
+    content: " ";
+    position: absolute;
+    top: 100%; /* This will position the arrow at the bottom of the tooltip */
+    left: 50%;
+    margin-left: -10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: black transparent transparent transparent; /* This will make the top border black*/
+}
+
+
+.tooltip a .tooltiptext_3 {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 7px 0;
+    position: absolute;
+    z-index: 1;
+    top:-60px;
+    left:560px;
+}
+
+.tooltip a:hover .tooltiptext_3 {
+    visibility: visible;
+}
+
+.tooltip .tooltiptext_3::after {
+    content: " ";
+    position: absolute;
+    top: 100%; /* This will position the arrow at the bottom of the tooltip */
+    left: 50%;
+    margin-left: -10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: black transparent transparent transparent; /* This will make the top border black*/
+}
+
+
+.tooltip a .tooltiptext_4 {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 7px 0;
+    position: absolute;
+    z-index: 1;
+    top:-60px;
+    left:815px;
+}
+
+.tooltip a:hover .tooltiptext_4 {
+    visibility: visible;
+}
+
+.tooltip .tooltiptext_4::after {
+    content: " ";
+    position: absolute;
+    top: 100%; /* This will position the arrow at the bottom of the tooltip */
+    left: 50%;
+    margin-left: -10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: black transparent transparent transparent; /* This will make the top border black*/
+}
+
+
+.tab {
+    float: left;
+    background-color: white;
+    left:1px;
+    top:67px;
+    width: 20.4%;
+    height: 510px;
+    }
+
+.tab li {
+    display: block;
+    background-color: white;
+    color: black;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    }
+
+.tab li:hover {
+    background-color: rgb(255, 255, 255);
+    padding: 20px 14px
+}
+
+
+.circle{
+    counter-reset: list-counter;
+    list-style: none;
+    float:left; 
+}
+.circle li{
+    margin: 1em 0em; 
+    font-size: 22px;   
+}
+.circle li:before{
+    content: counter(list-counter);
+    counter-increment: list-counter;
+    width: 1em;
+    height: 1em;
+    padding: 0.2em;
+    margin-right: 0.5em;
+    border-radius: 50%;
+    margin-inline-start: 1em;
+    background: rgb(36, 36, 36);
+    color: #fff;
+    font-family: arial;
+    font-size:20px;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+    
+}

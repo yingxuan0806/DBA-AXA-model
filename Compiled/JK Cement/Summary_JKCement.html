@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="UTF-8"/>
+	<title>JK Cement valuation</title>
+
+    <script src="https://www.amcharts.com/lib/4/core.js"></script>
+    <script src="https://www.amcharts.com/lib/4/charts.js"></script>
+    <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+    <script src = "../piecharts/pie charts_JKC_noanimation.js"></script>
+
+  <script type="text/javascript" src="../bubble-tree/jquery.min.js"></script>
+  <script type="text/javascript" src="../bubble-tree/jquery-migrate.min.js"></script>
+  <script type="text/javascript" src="../bubble-tree/jquery.history.js"></script>
+  <script type="text/javascript" src="../bubble-tree/jquery.tooltip.min.js"></script>
+  <script type="text/javascript" src="../bubble-tree/raphael-min.js"></script>
+  <script type="text/javascript" src="../bubble-tree/Tween.js"></script>
+  <script type="text/javascript" src="../bubble-tree/bubbletree.js"></script>
+  <link rel="stylesheet" type="text/css" href="../bubble-tree/bubbletree.css" />
+  <script type="text/javascript" src="../bubble-tree/cofog.js"></script>
+  
+
+  <script type="text/javascript">
+
+		$(function() {
+            var data = JSON.parse(`{
+                    "label": "JK Cement Model Valuation",
+                    "amount": 679.7,
+                    "color": "#261A1F",
+                    "children": [
+                    {
+                        "label": "Balance Sheet Appraisal",
+                        "amount": 520.7,
+                        "color": "#38622F",
+                        "children":[
+                        {
+                            "label":"Balance Sheet Items",
+                            "amount":520.7,
+                            "color": "#941A27",
+                            "children":[
+                            {
+                                "label": "book_earnings_xtrp",
+                                "amount": 9.2,
+                                "color":"#38622F",
+                                "children":[
+                                {
+                                    "label":"Per Share",
+                                    "amount":"8.1",
+                                    "color":"#2ab038"
+                                },
+                                {
+                                    "label":"Item Appraisal Country adjusted",
+                                    "amount":"1.139",
+                                    "color":"#2ab038"
+                                }   
+                                ]
+                            },
+                            {
+                                "label": "cash",
+                                "amount": 22.6,
+                                "color":"#38622F",
+                                "children":[
+                                {
+                                    "label":"Per Share",
+                                    "amount":"122.1",
+                                    "color":"#2ab038"
+                                },
+                                {
+                                    "label":"Item Appraisal Country adjusted",
+                                    "amount":"0.185",
+                                    "color":"#2ab038"
+                                }   
+                                ]
+                            },
+
+                            {
+                                "label": "cumulative_depreciation",
+                                "amount": 6.9,
+                                "color":"#38622F",
+                                "children":[
+                                {
+                                    "label":"Per Share",
+                                    "amount":"223",
+                                    "color":"#2ab038"
+                                },
+                                {
+                                    "label":"Item Appraisal Country adjusted",
+                                    "amount":"0.031",
+                                    "color":"#2ab038"
+                                }   
+                                ]
+                            },
+
+                            {
+                                "label": "accounts_payable_trd",
+                                "amount": 88.5,
+                                "color": "#941A27",
+                                "children":[
+                                {
+                                    "label":"Per Share",
+                                    "amount":"102.5",
+                                    "color":"#38622F"
+                                },
+                                {
+                                    "label":"Item Appraisal Country adjusted",
+                                    "amount":"0.863",
+                                    "color":"#941A27"
+                                }   
+                                ]
+                            },
+
+                            {
+                                "label": "debt_other_longterm",
+                                "amount": 352.1,
+                                "color": "#941A27",
+                                "children":[
+                                {
+                                    "label":"Per Share",
+                                    "amount":"346.1",
+                                    "color":"#38622F"
+                                },
+                                {
+                                    "label":"Item Appraisal Country adjusted",
+                                    "amount":"1.017",
+                                    "color":"#941A27"
+                                }   
+                                ]
+                            },
+
+                            {
+                                "label": "plant_net",
+                                "amount": 88.6,
+                                "color": "#941A27",
+                                "children":[{
+                                    "label":"Per Share",
+                                    "amount":"731.9",
+                                    "color":"#38622F"
+                                },
+                                {
+                                    "label":"Item Appraisal Country adjusted",
+                                    "amount":"0.121",
+                                    "color":"#781425"
+                                }   
+                                ]
+                            }
+                        ]
+                    },
+
+                    {
+                        "label": "Contribution by Industry",
+                        "amount": 36.388,
+                        "color": "#38622F",
+                        "children":[
+                        {
+                            "label": "Cement",
+                            "amount": 1245.2,
+                            "color":"#2ab038",
+                            "children":[
+                                {
+                                    "label":"Per Share",
+                                    "amount":"1054.60",
+                                    "color":"#781425"
+                                },
+                                {
+                                    "label":"Industry Appraisal Country adjusted",
+                                    "amount":"1.181",
+                                    "color":"#781425"
+                                }
+                                ]
+                        }
+                        ]
+                    }
+                    ]
+                },
+
+                    {
+                        "label": "Income Sheet Contribution",
+                        "amount": 315.9,
+                        "color": "#38622F",
+                        "children": [
+                        {
+                            "label": "Income Sheet Items",
+                            "amount": 549.8,
+                            "color": "#38622F",
+                            "children":[
+                            {
+                                "label": "sales_net",
+                                "amount": 4618.4,
+                                "color":"#2ab038",
+                                "children":[
+                                {
+                                    "label":"Per Share",
+                                    "amount":"691.2",
+                                    "color":"#781425"
+                                },
+                                {
+                                    "label":"Item Appraisal Country adjusted",
+                                    "amount":"6.682",
+                                    "color":"#781425"
+                                }
+                                ]
+                            },
+                            {
+                                "label": "projected_delta_recurring_earnings_to_price",
+                                "amount": 125.3,
+                                "color":"#2ab038",
+                                "children":[
+                                {
+                                    "label":"Per Share",
+                                    "amount":"9.5",
+                                    "color":"#781425"
+                                },
+                                {
+                                    "label":"Item Appraisal Country adjusted",
+                                    "amount":"13.176",
+                                    "color":"#781425"
+                                }
+                                ]
+                            },
+
+                            {
+                                "label": "non_operating_in_x_ot",
+                                "amount": 39.6,
+                                "color":"#2ab038",
+                                "children":[
+                                {
+                                    "label":"Per Share",
+                                    "amount":"6.1",
+                                    "color":"#781425"
+                                },
+                                {
+                                    "label":"Item Appraisal Country adjusted",
+                                    "amount":"6.462",
+                                    "color":"#781425"
+                                }
+                                ]
+                            },
+
+                            {
+                                "label": "interest_expense_before_tax",
+                                "amount": 221.6,
+                                "color": "#941A27",
+                                "children":[
+                                {
+                                    "label":"Per Share",
+                                    "amount":"33.8",
+                                    "color":"#ad2627"
+                                },
+                                {
+                                    "label":"Item Appraisal Country adjusted",
+                                    "amount":"6.558",
+                                    "color":"#2ab038"
+                                }
+                                ]
+
+                            },
+
+                            {
+                                "label": "sales_cost",
+                                "amount": 3049.6,
+                                "color": "#941A27",
+                                "children":[
+                                {
+                                    "label":"Per Share",
+                                    "amount":"105.6",
+                                    "color":"#ad2627"
+                                },
+                                {
+                                    "label":"Item Appraisal Country adjusted",
+                                    "amount":"6.369",
+                                    "color":"#2ab038"
+                                }
+                                ]
+                            },
+
+                            {
+                                "label": "sga_expense",
+                                "amount": 672.3,
+                                "color": "#941A27",
+                                "children":[
+                                {
+                                    "label":"Per Share",
+                                    "amount":"458.4",
+                                    "color":"#ad2627"
+                                },
+                                {
+                                    "label":"Item Appraisal Country adjusted",
+                                    "amount":"6.653",
+                                    "color":"#2ab038"
+                                }
+                                ]
+                            }
+                            ]
+                        },
+                        {
+                            "label": "Contribution by Industry",
+                            "amount": "438.7",
+                            "color": "#38622F",
+                            "children":[
+                            {
+                                "label": "Cement",
+                                "amount": "438.7",
+                                "color":"#2ab038",
+                                "children":[
+                                {
+                                    "label":"Per Share",
+                                    "amount":"1054.6",
+                                    "color":"#ad2627"
+                                },
+                                {
+                                    "label":"Industry Appraisal Country adjusted",
+                                    "amount":"0.416",
+                                    "color":"#2ab038"
+                                }
+                                ]
+                            }
+                            ]
+                        },
+                        {
+                            "label": "Base Line",
+                            "amount": "376",
+                            "color": "#941A27"
+                        }
+                        ] 
+
+                    },
+
+                    {
+                        "label": "Unique Revenue Contribution",
+                        "amount":10.6,
+                        "color":"#38622F",
+                        "children":[
+                            {
+                                "label": "Contribution by Industry",
+                                "amount": 10.6,
+                                "color":"#2ab038",
+                                "children":[
+                                {
+                                    "label":"Contribution by Cement",
+                                    "amount":10.6,
+                                    "color":"#2ab038",
+                                    "children":[
+                                    {
+                                        "label":"Unique value",
+                                        "amount":"16.2",
+                                        "color":"#ad2627"
+                                    },
+                                    {
+                                        "label":"Industry Appraisal Country adjusted",
+                                        "amount":"0.654",
+                                        "color":"#2ab038"
+                                    }
+                                    ]
+                                }
+                                ]
+                            },
+                            {
+                                "label": "Contribution by Items (NIL)",
+                                "amount": 0,
+                                "color":"#A9A9A9"
+                            }
+                            ]
+                    },
+
+                    {
+                        "label": "Unique Earning Contribution",
+                        "amount": 22.3,
+                        "color":"#38622F",
+                        "children": [
+                            {
+                                "label": "Contribution by Industry",
+                                "amount": 22.3,
+                                "color":"#2ab038",
+                                "children":[
+                                {
+                                    "label":"Contribution by Cement",
+                                    "amount":22.3,
+                                    "color":"#2ab038",
+                                    "children":[
+                                    {
+                                        "label":"Unique value",
+                                        "amount":"30.6",
+                                        "color":"#ad2627"
+                                    },
+                                    {
+                                        "label":"Industry Appraisal Country adjusted",
+                                        "amount":"0.729",
+                                        "color":"#2ab038"
+                                    }
+                                    ]
+                                }
+                                ]
+                            },
+                            {
+                                "label": "Contribution by Items (NIL)",
+                                "amount": 0,
+                                "color":"#A9A9A9"
+                            }
+                            ]
+                        
+                    }
+                    ]
+                }`);
+
+			new BubbleTree({
+				data: data,
+				container: '.bubbletree'
+			});
+
+
+		});
+
+    </script>
+
+    <script>
+        function function_back(){
+            location.href = "../../HeatMap/BSHeatMap.html"
+        }
+    </script>
+
+</head>
+<body>
+
+    <svg height="34" width="1200"> 
+            <circle class = "previouspage" cx="30" cy="17" r="17" onclick = "function_back()"/>
+            <text x="55" y="22" class = "Goback">Main Menu</text>
+            <image class = "previouspage" href = "../back.svg" height="17px"width="17px" x = "20" y = "10" onclick = "function_back()"/>
+    </svg>
+
+    <style type = "text/css">
+        h2{position:fixed; left:1010px; top:50px;font: 20px Tahoma; fill:black}
+        h3{position:fixed; left:1070px; top:86px;font: 20px Tahoma; fill:black}
+        h4{position:fixed; left:1070px; top:120px;font: 20px Tahoma; fill:black}
+        h5{position:fixed; left:1060px; top:-25px;font: 25px Tahoma; fill:black}
+        div.legend {
+            position: absolute;
+            left:1000px;
+            top: 60px;
+            width: 220px;
+            height: 100px;
+            padding: 10px;
+            border: 1px solid gray;
+            margin: 0;
+        }
+        .previouspage{position:fixed;fill:rgb(226, 226, 226);cursor:pointer;}
+        .Goback{position:fixed;font: 16px Tahoma; fill:black}
+        .title{position:fixed;font: 25px Tahoma;fill:black}
+        .dot1 {
+            position:fixed;
+            left:1010px;
+            top:110px;
+            height: 20px;
+            width: 20px;
+            background-color: #ad2627;
+            border-radius: 50%;
+            display: inline-block;
+        }
+        .dot12 {
+            position:fixed;
+            left:1035px;
+            top:110px;
+            height: 20px;
+            width: 20px;
+            background-color: #941A27;
+            border-radius: 50%;
+            display: inline-block;
+        }
+        .dot2 {
+            position:fixed;
+            left:1010px;
+            top:150px;
+            height: 20px;
+            width: 20px;
+            background-color: #2ab038;
+            border-radius: 50%;
+            display: inline-block;
+        }
+        .dot22 {
+            position:fixed;
+            left:1035px;
+            top:150px;
+            height: 20px;
+            width: 20px;
+            background-color: #38622F;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        img{
+            position:fixed;
+            top:15px;
+            left:1000px;
+        }
+    </style>
+        
+        
+    <div class="bubbletree-wrapper">
+        <div class="bubbletree"></div>
+    </div>
+
+    <div id="chartdiv"></div>
+
+    <style>
+        #chartdiv {
+            margin-top:0%;
+            width: 20%;
+            height: 150px;
+        }
+    </style>
+
+    <div class = "legend">
+        <h2> Legend: </h2>
+        <span class="dot1"></span>
+        <span class="dot12"></span>
+        <span class="dot2"></span>
+        <span class="dot22"></span>
+        <h3>Negative Values</h3>
+        <h4>Positive Values</h4>
+        <h5>JK Cement</h5>
+    </div>
+
+    <img src = "Flag_of_India.svg" style = "height:32px">
+
+    <div id="chartdiv"></div>
+
+    <style>
+        #chartdiv {
+            margin-top:0%;
+            width: 20%;
+            height: 150px;
+        }
+    </style>
+
+
+</body>
+</html>

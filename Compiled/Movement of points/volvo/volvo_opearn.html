@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<meta charset='utf-8'>
+
+<html>
+
+<head>
+    <link rel='stylesheet' href='styles.css' type='text/css'>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://unpkg.com/d3@5.6.0/dist/d3.min.js"></script>
+    <script src="jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Vollkorn" />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700' rel='stylesheet' type='text/css'>
+</head>
+
+<div class='container'>
+    <img src='6d02f5aaca17a1e7786436addd0e5d6dx.jpg' alt='volvo branch' class='bg-image'>
+    <button class="button  arrow" onclick="window.location.href = '../../volvo AB/Summary_volvoAB.html';"><b>Summary</b></button>
+    <div class='bg-text'>
+        <h2>AB Volvo</h2>
+        <h3><em>Sweden</em></h3>
+        <p>AB Volvo (publ), together with its subsidiaries, manufactures and sells trucks, buses, construction equipment, and marine and industrial engines in Europe, North America, South America, Asia, Africa, and Oceania.</p>
+    </div>
+</div>
+
+<div class="header" id="myHeader">
+    <h2 class='banner-title'>Op Earnings</h2>
+    <h2 id="site-title" class="not-visible-title"><em>SW: 0.8824</em></h2>
+    <div class='buttonbox'>
+        <div class="button_cont" align="center"><a class="bs_button" href="volvo_bs.html" rel="nofollow noopener"><b>Balance Sheet</b></a></div>
+        &nbsp;
+        <form action='index3.html'>
+            <div class="button_cont" align="center"><a class="is_button" href="volvo_is.html" rel="nofollow noopener"><b>Income Sheet</b></a></div>
+        </form>
+        &nbsp;
+        <form action='index4.html'>
+            <div class="button_cont" align="center"><a class="oprev_button" href="volvo_oprev.html" rel="nofollow noopener"><b>Op Revenues</b></a></div>
+        </form>
+    </div>
+</div>
+
+<script>
+    // When the user scrolls the page, execute myFunction
+    window.onscroll = function() {
+        myFunction()
+    };
+
+    // Get the header
+    var header = document.getElementById("myHeader");
+    var scaler = document.getElementById("site-title")
+    console.log(scaler)
+        // Get the offset position of the navbar
+    var sticky = header.offsetTop;
+
+    // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+    function myFunction() {
+        if (window.pageYOffset > sticky) {
+            header.classList.add("sticky");
+            scaler.classList.remove('not-visible-title');
+            scaler.classList.add('visible-title');
+        } else {
+            header.classList.remove("sticky");
+            scaler.classList.remove('visible-title');
+            scaler.classList.add('not-visible-title');
+        }
+    }
+</script>
+
+<div id='graph-info'>
+    <div class='country'>
+        <img src='se.png' alt='country flag' id='flag'> &nbsp;
+        <h1>Country Premium/Discount: 0.8824</h1>
+    </div>
+
+    <h2 class='chart-title'>Industries</h2>
+    <div style="display: flex">
+        <button id='start1' class="graph-button">Appraise</button> &nbsp;
+        <button id='reset1' class="graph-button">Reset</button>
+    </div>
+    <div id='chart-1'>
+        <script src='volvo_opearn.js'></script>
+    </div>
+</div>
+
+</html>

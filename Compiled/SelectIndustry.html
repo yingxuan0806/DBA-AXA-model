@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      
+      
+      <link rel="stylesheet" type="text/css" href="SelectIndustry.css">
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+      <link href="semantic/semantic.min.css" type="text/css" rel="stylesheet"/>
+      <script src="semantic/semantic.min.js"></script>
+      <script>
+              $(document).ready(function(){
+                  $('.ui.search.selection.dropdown') .dropdown();
+              });
+      </script>
+
+      <script type="text/javascript" src="http://mbostock.github.com/d3/d3.js" >
+      </script>
+
+    <body> 
+
+
+      <svg height="500" width="2000">
+        <!--<line class = "horizontal" x1="0" y1="100" x2="2000" y2="100" style="stroke:#ED553B;stroke-width:1" />
+        <line class = "vertical" x1 = 260 y1="0" x2 = 260 y2="99" style="stroke:#ED553B;stroke-width:1" />-->
+        <rect class = "top" width="2000" height="90" x="-10" y="0" style="fill:#e9edf1"/>
+      </svg>
+
+
+      <h2 id = "title"> Please Select the industry</h2>
+
+
+      <select class="ui search selection dropdown height-change" id = "selection" onchange="ChangeIndustryList()"> 
+          <option value="">Industry Selected</option> 
+          <option value="Banks">Banks</option> 
+          <option value="Securities brokers & dealers">Securities brokers & dealers</option>
+          <option value="Insurance-Casualty & Misc">Insurance-Casualty & Misc</option>
+          <option value="Apparel">Apparel</option>
+          <option value="Leather, Shoes & Luggage">Leather, Shoes & Luggage </option>
+          <option value="Household Items">Household Items</option>
+          <option value="Wholesale Trade-Other">Wholesale Trade-Other</option>
+          <option value="Const,Railroad,Mining Machiner">Const,Railroad,Mining Machiner</option>
+          <option value="Investment Management">Investment Management</option>
+          <option value="Auto Manufacturers">Auto Manufacturers</option>
+          <option value="Trucks & Trailers">Trucks & Trailers</option>
+          <option value="Business Credit">Business Credit</option>
+          <option value="Life Insurance">Life Insurance</option>
+          <option value="Electronic Components">Electronic Components</option>
+          <option value="Textile Mill Products">Textile Mill Products</option>
+          <option value="Cellular Telephone">Cellular Telephone</option>
+          <option value="Cement">Cement</option>
+            
+      </select> 
+
+
+      <h4 id = "prompt"> Companies </h4>
+ 
+            <!--<select id="choose company"></select> -->
+                <ul class = "tab circle" id="myUl"></ul>
+
+            <script>
+                  var IndustryandCompany = {};
+
+                  IndustryandCompany['Banks'] = ['DBS','OCBC','UOB','Thanachart Capital'];
+                  IndustryandCompany['Securities brokers & dealers'] = ['DBS','UOB'];
+                  IndustryandCompany['Insurance-Casualty & Misc'] = ['OCBC','Thanachart Capital']
+                  IndustryandCompany['Apparel'] = ['Adidas']
+                  IndustryandCompany['Leather, Shoes & Luggage'] = ['Adidas']
+                  IndustryandCompany['Household Items'] = ['Adidas']
+                  IndustryandCompany['Wholesale Trade-Other'] = ['Adidas','Posco International']
+                  IndustryandCompany['Const,Railroad,Mining Machiner'] = ['volvo AB']
+                  IndustryandCompany['Investment Management'] = ['Thanachart Capital']
+                  IndustryandCompany['Auto Manufacturers'] = ['volvo AB']
+                  IndustryandCompany['Trucks & Trailers'] = ['volvo AB']
+                  IndustryandCompany['Business Credit'] = ['volvo AB']
+                  IndustryandCompany['Life Insurance'] = ['Thanachart Capital']
+                  IndustryandCompany['Electronic Components'] = ['Tripod Technology']
+                  IndustryandCompany['Textile Mill Products'] = ['Posco International']
+                  IndustryandCompany['Cellular Telephone'] = ['Mobile Telecom Saudi Arabia']
+                  IndustryandCompany['Cement'] = ['JK Cement']
+
+                  
+                  function ChangeIndustryList() {
+                    var list = document.getElementById("myUl")
+                    while (list.hasChildNodes()) {  
+                      list.removeChild(list.firstChild);
+                      }
+                    document.getElementById("prompt").innerHTML = "";
+                    var industryList = document.getElementById("selection");
+                    var selIndustry = industryList.options[industryList.selectedIndex].value;
+                    var industry_array = IndustryandCompany[selIndustry];
+
+                    industry_array.forEach(function(item) {
+                    document.getElementById("prompt").innerHTML = "Companies";
+                    var li = document.createElement("li");
+                    var a = document.createElement("a");
+                    var text = document.createTextNode(item);
+
+                    if (selIndustry == "Banks"){
+                        a.setAttribute('href', item+"/"+item+'-bank'+'.html');
+                        a.textContent = item
+                        li.appendChild(a);
+                        }
+
+                      if (selIndustry == "Wholesale Trade-Other"){
+                        a.setAttribute('href', item+"/"+item+'-WTO'+'.html');
+                        a.textContent = item
+                        li.appendChild(a);
+                    }
+                      if (selIndustry == "Securities brokers & dealers"){
+                        a.setAttribute('href', "../"+item+"/"+item+'-SBD'+'.html');
+                        a.textContent = item
+                        li.appendChild(a);
+                        }
+
+                      if (selIndustry == "Insurance-Casualty & Misc"){
+                        a.setAttribute('href', "../"+item+"/"+item+'-ICM'+'.html');
+                        a.textContent = item
+                        li.appendChild(a);
+                        }
+
+                      if (selIndustry == "Apparel"){
+                      a.setAttribute('href', "../"+item+"/"+item+'-apparel'+'.html');
+                      a.textContent = item
+                      li.appendChild(a);
+                      }
+
+                      if (selIndustry == "Leather, Shoes & Luggage"){
+                      a.setAttribute('href', "../"+item+"/"+item+'-LSL'+'.html');
+                      a.textContent = item
+                      li.appendChild(a);
+                      }
+
+                      if (selIndustry == "Household Items"){
+                      a.setAttribute('href', "../"+item+"/"+item+'-HI'+'.html');
+                      a.textContent = item
+                      li.appendChild(a);
+                      }
+
+                      if (selIndustry == "Life Insurance"){
+                      a.setAttribute('href', "../"+item+"/"+item+'-LI'+'.html');
+                      a.textContent = item
+                      li.appendChild(a);
+                      }
+
+                      if (selIndustry == "Const,Railroad,Mining Machiner"){
+                      a.setAttribute('href', "../"+item+"/"+item+'-CRMM'+'.html');
+                      a.textContent = item
+                      li.appendChild(a);
+                      }
+
+                      if (selIndustry == "Investment Management"){
+                      a.setAttribute('href', "../"+item+"/"+item+'-IM'+'.html');
+                      a.textContent = item
+                      li.appendChild(a);
+                      }
+
+                      if (selIndustry == "Auto Manufacturers"){
+                      a.setAttribute('href', "../"+item+"/"+item+'-AM'+'.html');
+                      a.textContent = item
+                      li.appendChild(a);
+                      }
+
+                      if (selIndustry == "Trucks & Trailers"){
+                      a.setAttribute('href', "../"+item+"/"+item+'-TT'+'.html');
+                      a.textContent = item
+                      li.appendChild(a);
+                      }
+
+                      if (selIndustry == "Business Credit"){
+                      a.setAttribute('href', "../"+item+"/"+item+'-BC'+'.html');
+                      a.textContent = item
+                      li.appendChild(a);
+                      }
+
+                      if (selIndustry == "Electronic Components"){
+                      a.setAttribute('href', "../"+item+"/"+item+'-EC'+'.html');
+                      a.textContent = item
+                      li.appendChild(a);
+                      }
+
+                      if (selIndustry == "Textile Mill Products"){
+                      a.setAttribute('href', "../"+item+"/"+item+'-TMP'+'.html');
+                      a.textContent = item
+                      li.appendChild(a);
+                      }
+
+                      if (selIndustry == "Cellular Telephone"){
+                      a.setAttribute('href', "../"+item+"/"+item+'-Cell'+'.html');
+                      a.textContent = item
+                      li.appendChild(a);
+                      }
+
+                      if (selIndustry == "Cement"){
+                      a.setAttribute('href', "../"+item+"/"+item+'-Cement'+'.html');
+                      a.textContent = item
+                      li.appendChild(a);
+                      }
+                    document.getElementById("myUl").appendChild(li);
+                  });
+                  }
+                  //} 
+            </script>
+            
+            <style type="text/css">
+              ul {
+              list-style: none;
+              padding-left:0;
+              position:fixed;
+              top:100px;
+              left:100px;
+              font: 30px Tahoma;
+              width: 10em
+              }
+              li{margin: 1em 0}
+              a{text-decoration:none; color:rgb(43, 42, 42)}
+              h2{font: 16px Tahoma; color:black;position:fixed;left:300px;top:5px}
+              h4{font: 25px Tahoma; color:black;position:fixed;left:60px;top:0px}
+            </style>
+
+    </body>
+  </html>

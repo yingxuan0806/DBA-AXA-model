@@ -1,0 +1,94 @@
+/**
+ * @author Ying Xuan Yeo
+ */
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+
+/* Page Conetnt */
+
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+
+/* global average */
+
+#global_average {
+    position: absolute;
+    /* position: -webkit-sticky; */
+    background: #a2d13b;
+    width: 10vw;
+    height: 10vh;
+    /* top: 20vh;
+    bottom: 0; */
+    font: 20px 'Arial';
+    color: #fff;
+    line-height: 30px;
+    /* text-align: center; */
+    /* vertical-align: middle; */
+    box-sizing: border-box;
+    border-radius: 2px;
+    display: table;
+}
+
+#text_inside {
+    display: table-cell;
+    text-align: center;
+    /* position: relative; */
+    vertical-align: middle;
+}
+
+#balance_sheet_heat_map {
+    width: 100%;
+    /* minus padding and font size */
+    height: calc(100vh - 37px);
+    position: absolute;
+}
+
+
+/* Bottom navigation bar */
+
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+/* Style the links inside the navigation bar */
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 10px 0px;
+    text-decoration: none;
+    font-size: 17px;
+    /* equal width links - since there are 4 tabs: 25% each */
+    width: 25%;
+}
+
+
+/* Change color of links on hover */
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+
+/* Add green background color to the active link */
+
+.navbar a.active {
+    background-color: #7da822;
+    color: white;
+}

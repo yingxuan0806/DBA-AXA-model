@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://www.amcharts.com/lib/4/core.js"></script>
+    <script src="https://www.amcharts.com/lib/4/charts.js"></script>
+    <script src="https://www.amcharts.com/lib/4/maps.js"></script>
+    <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+    <script src="https://www.amcharts.com/lib/4/geodata/worldLow.js"></script>
+
+
+    <link rel="stylesheet" type="text/css" href="UEHeatMap.css">
+    <meta name="author" content="Ying Xuan Yeo">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Adjustments for Unique Operating Earnings History Heat Map</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!--Heat Map-->
+        <div id="unique_earnings_heat_map"></div>
+        <script src="UEHeatMap.js"></script>
+
+        <!--global average-->
+        <div id="global_average">
+            <div id="text_inside">Global Average</br>1.000</div>
+        </div>
+
+    </div>
+
+
+
+
+    <!--bottom navigation bar-->
+    <div class="navbar" id="bottomNavBar">
+        <a href="BSHeatMap.html">Balance Sheet</a>
+        <a href="ISHeatMap.html">Income Statement</a>
+        <a href="URHeatMap.html">Adjustments for Unique Revenues</a>
+        <a class="active" href="UEHeatMap.html">Adjustments for Unique Operating Earnings History</a>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="UTF-8"/>
+	<title>DBS valuation</title>
+
+    <script src="https://www.amcharts.com/lib/4/core.js"></script>
+    <script src="https://www.amcharts.com/lib/4/charts.js"></script>
+    <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+    <script src = "../piecharts/pie chart_DBS_noanimation.js"></script>
+
+  <script type="text/javascript" src="../bubble-tree/jquery.min.js"></script>
+  <script type="text/javascript" src="../bubble-tree/jquery-migrate.min.js"></script>
+  <script type="text/javascript" src="../bubble-tree/jquery.history.js"></script>
+  <script type="text/javascript" src="../bubble-tree/jquery.tooltip.min.js"></script>
+  <script type="text/javascript" src="../bubble-tree/raphael-min.js"></script>
+  <script type="text/javascript" src="../bubble-tree/Tween.js"></script>
+  <script type="text/javascript" src="../bubble-tree/bubbletree.js"></script>
+  <link rel="stylesheet" type="text/css" href="../bubble-tree/bubbletree.css" />
+  <script type="text/javascript" src="../bubble-tree/cofog.js"></script>
+  
+
+  <script type="text/javascript">
+
+		$(function() {
+            var data = JSON.parse(`{
+                    "label": "DBS Model Valuation",
+                    "amount": 24.201,
+                    "color": "#261A1F",
+                    "children": [
+                    {
+                        "label": "Balance Sheet Appraisal",
+                        "amount": 24.201,
+                        "color": "#38622F",
+                        "children":[
+                            {
+                                "label": "Contribution by Industry",
+                                "amount": 36.388,
+                                "color": "#38622F",
+                                "children":[
+                                {
+                                    "label": "Banks",
+                                    "amount": 24.666,
+                                    "color":"#2ab038",
+                                    "children":[{
+                                        "label":"Per Share",
+                                        "amount":"34.128",
+                                        "color":"#2ab038"
+                                    },
+                                    {
+                                        "label":"Industry Appraisal Country adjusted",
+                                        "amount":"0.779",
+                                        "color":"#2ab038"
+                                    }   
+                                    ]
+                                },
+                                {
+                                    "label": "Securities brokers & dealers",
+                                    "amount": 11.722,
+                                    "color":"#2ab038",
+                                    "children":[{
+                                        "label":"Per Share",
+                                        "amount":"15.052",
+                                        "color":"#2ab038"
+                                    },
+                                    {
+                                        "label":"Industry Appraisal Country adjusted",
+                                        "amount":"0.779",
+                                        "color":"#2ab038"
+                                    }   
+                                    ]
+                                }
+                            ]
+                        },
+
+                        {
+                            "label":"Balance Sheet Items",
+                            "amount":12.187,
+                            "color": "#941A27",
+                            "children":[
+                            {
+                                "label": "book_quality_growth",
+                                "amount": 10.517,
+                                "color":"#38622F",
+                                "children":[{
+                                    "label":"Per Share",
+                                    "amount":"10.308",
+                                    "color":"#2ab038"
+                                },
+                                {
+                                    "label":"Item Appraisal Country adjusted",
+                                    "amount":"1.02",
+                                    "color":"#2ab038"
+                                }   
+                                ]
+                            },
+                            {
+                                "label": "cash",
+                                "amount": 0.274,
+                                "color":"#38622F",
+                                "children":[{
+                                    "label":"Per Share",
+                                    "amount":"1.999",
+                                    "color":"#2ab038"
+                                },
+                                {
+                                    "label":"Item Appraisal Country adjusted",
+                                    "amount":"0.137",
+                                    "color":"#2ab038"
+                                }   
+                                ]
+                            },
+
+                            {
+                                "label": "book_earnings_xtrp",
+                                "amount": 0.464,
+                                "color":"#38622F",
+                                "children":[{
+                                    "label":"Per Share",
+                                    "amount":"0.612",
+                                    "color":"#2ab038"
+                                },
+                                {
+                                    "label":"Item Appraisal Country adjusted",
+                                    "amount":"0.759",
+                                    "color":"#2ab038"
+                                }   
+                                ]
+                            },
+
+                            {
+                                "label": "deposits_savings",
+                                "amount": 3.724,
+                                "color": "#ad2627",
+                                "children":[{
+                                    "label":"Per Share",
+                                    "amount":"6.303",
+                                    "color":"#38622F"
+                                },
+                                {
+                                    "label":"Item Appraisal Country adjusted",
+                                    "amount":"0.591",
+                                    "color":"#941A27"
+                                }   
+                                ]
+                                
+                            },
+
+                            {
+                                "label": "debt_other_longterm",
+                                "amount": 5.644,
+                                "color": "#ad2627",
+                                "children":[{
+                                    "label":"Per Share",
+                                    "amount":"8.215",
+                                    "color":"#38622F"
+                                },
+                                {
+                                    "label":"Item Appraisal Country adjusted",
+                                    "amount":"0.687",
+                                    "color":"#941A27"
+                                }   
+                                ]
+                            },
+
+                            {
+                                "label": "debt_in_current_liability",
+                                "amount": 9.14,
+                                "color": "#ad2627",
+                                "children":[{
+                                    "label":"Per Share",
+                                    "amount":"13.139",
+                                    "color":"#38622F"
+                                },
+                                {
+                                    "label":"Item Appraisal Country adjusted",
+                                    "amount":"0.696",
+                                    "color":"#941A27"
+                                }   
+                                ]
+                            }
+                        ]
+                    }             
+                    ]
+                },
+
+                    {
+                        "label": "Income Sheet Contribution",
+                        "amount": 0.739,
+                        "children": [
+                        {
+                            "label": "Income Sheet Items",
+                            "amount": 14.035,
+                            "color": "#302102",
+                            "children":[
+                            {
+                                "label": "sales_net",
+                                "amount": 41.374,
+                                "color":"#2ab038",
+                                "children":[{
+                                "label":"Per Share",
+                                "amount":"7.892",
+                                "color":"#2ab038"
+                            },
+                            {
+                                "label":"Item Appraisal Country adjusted",
+                                "amount":"5.243",
+                                "color":"#2ab038"
+                            }   
+                            ]
+                            },
+                            {
+                                "label": "projected_delta_recurring_earnings_to_price",
+                                "amount": 0.702,
+                                "color":"#2ab038",
+                                "children":[{
+                                "label":"Per Share",
+                                "amount":"0.069",
+                                "color":"#2ab038"
+                            },
+                            {
+                                "label":"Item Appraisal Country adjusted",
+                                "amount":"10.099",
+                                "color":"#2ab038"
+                            }   
+                            ]
+                            },
+
+                            {
+                                "label": "non_operating_in_x_ot",
+                                "amount": 0.118,
+                                "color":"#2ab038",
+                                "children":[{
+                                "label":"Per Share",
+                                "amount":"0.023",
+                                "color":"#2ab038"
+                            },
+                            {
+                                "label":"Item Appraisal Country adjusted",
+                                "amount":"5.021",
+                                "color":"#2ab038"
+                            }   
+                            ]
+                            },
+
+                            {
+                                "label": "income_taxes",
+                                "amount": 1.333,
+                                "color": "#ad2627",
+                                "children":[{
+                                "label":"Per Share",
+                                "amount":"0.416",
+                                "color":"#941A27"
+                            },
+                            {
+                                "label":"Item Appraisal Country adjusted",
+                                "amount":"3.204",
+                                "color":"#2ab038"
+                            }   
+                            ]
+                            },
+
+                            {
+                                "label": "expense_interest",
+                                "amount": 12.441,
+                                "color": "#ad2627",
+                                "children":[{
+                                "label":"Per Share",
+                                "amount":"2.29",
+                                "color":"#941A27"
+                            },
+                            {
+                                "label":"Item Appraisal Country adjusted",
+                                "amount":"5.433",
+                                "color":"#2ab038"
+                            }   
+                            ]
+                            },
+
+                            {
+                                "label": "sga_expense",
+                                "amount": 13.246,
+                                "color": "#ad2627",
+                                "children":[{
+                                "label":"Per Share",
+                                "amount":"2.671",
+                                "color":"#941A27"
+                            },
+                            {
+                                "label":"Item Appraisal Country adjusted",
+                                "amount":"4.959",
+                                "color":"#2ab038"
+                            }   
+                            ]
+                            }
+                            ]
+                        },
+                        {
+                            "label": "Contribution by Industry",
+                            "amount": "16.874",
+                            "color": "#1e7814",
+                            "children":[
+                            {
+                                "label": "Banks",
+                                "amount": 11.401,
+                                "color":"#2ab038",
+                                "children":[
+                                    {
+                                        "label":"Per Share",
+                                        "amount":"34.128",
+                                        "color": "#2ab038"
+
+                                    },
+                                    {
+                                        "label":"Industry Appraisal Country adjusted",
+                                        "amount":"0.334",
+                                        "color": "#2ab038"
+                                    }
+                                ]
+                            },
+                            {
+                                "label": "Securities brokers & dealers",
+                                "amount": 5.473,
+                                "color":"#2ab038",
+                                "children":[
+                                    {
+                                        "label":"Per Share",
+                                        "amount":"15.052",
+                                        "color": "#2ab038"
+
+                                    },
+                                    {
+                                        "label":"Industry Appraisal Country adjusted",
+                                        "amount":"0.364",
+                                        "color": "#2ab038"
+                                    }
+                                ]
+                            }
+                            ]
+                        },
+                        {
+                            "label": "Base Line",
+                            "amount": "13.5",
+                            "color": "#781425"
+                        }
+                        ] 
+
+                    },
+
+                    {
+                        "label": "Unique Revenue Contribution",
+                        "amount":0.57,
+                        "color":"#941A27",
+                        "children":[
+                            {
+                                "label": "Contribution by Industry",
+                                "amount": 0.57,
+                                "color":"#ad2627",
+                                "children":[
+                                {
+                                    "label":"Contribution by Bank",
+                                    "amount":0.027,
+                                    "color":"#2ab038",
+                                    "children":[
+                                        {
+                                            "label":"Unique value",
+                                            "amount":"0.445",
+                                            "color": "#2ab038"
+
+                                        },
+                                        {
+                                            "label":"Industry Appraisal Country adjusted",
+                                            "amount":"0.062",
+                                            "color": "#2ab038"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "label":"Contribution by Securities Brokers & Dealers",
+                                    "amount":0.597,
+                                    "color":"#ad2627",
+                                    "children":[
+                                        {
+                                            "label":"Unique value",
+                                            "amount":"1.428",
+                                            "color": "#941A27"
+
+                                        },
+                                        {
+                                            "label":"Industry Appraisal Country adjusted",
+                                            "amount":"0.418",
+                                            "color": "#2ab038"
+                                        }
+                                    ]
+                                }
+                                ]
+                            },
+                            {
+                                "label": "Contribution by Items (NIL)",
+                                "amount": 0,
+                                "color":"#A9A9A9"
+                            }    
+                            ]
+                    },
+
+                    {
+                        "label": "Unique Earning Contribution",
+                        "amount": 0.63,
+                        "color":"#2ab038",
+                        "children": [
+                            {
+                                "label": "Contribution by Industry",
+                                "amount": 0.57,
+                                "color":"#ad2627",
+                                "children":[
+                                {
+                                    "label": "Contribution by Bank",
+                                    "amount": 0.812,
+                                    "color": "#38622F",
+                                    "children":[
+                                        {
+                                            "label":"Unique value",
+                                            "amount":"1.174",
+                                            "color": "#2ab038"
+
+                                        },
+                                        {
+                                            "label":"Industry Appraisal Country adjusted",
+                                            "amount":"0.418",
+                                            "color": "#2ab038"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "label": "Contribution by Securities Brokers & Dealers",
+                                    "amount": 0.181,
+                                    "color": "#941A27",
+                                    "children":[
+                                        {
+                                            "label":"Unique value",
+                                            "amount":"0.134",
+                                            "color": "#2ab038"
+
+                                        },
+                                        {
+                                            "label":"Industry Appraisal Country adjusted",
+                                            "amount":"1.354",
+                                            "color": "#ad2627"
+                                        }
+                                    ]
+                                    
+                                }
+                                ]
+                            },
+                            {
+                                "label": "Contribution by Items (NIL)",
+                                "amount": 0,
+                                "color":"#A9A9A9"
+                            }
+                            ]
+                    }
+                    ]
+                }`);
+
+			new BubbleTree({
+				data: data,
+				container: '.bubbletree'
+			});
+
+
+		});
+
+    </script>
+
+    <script>
+        function function_back(){
+            location.href = "../../HeatMap/BSHeatMap.html"
+        }
+    </script>
+
+</head>
+<body>
+
+    <svg height="34" width="1200"> 
+            <circle class = "previouspage" cx="30" cy="17" r="17" onclick = "function_back()"/>
+            <text x="55" y="22" class = "Goback">Main Menu</text>
+            <image class = "previouspage" href = "../back.svg" height="17px"width="17px" x = "20" y = "9" onclick = "function_back()"/>
+    </svg>
+    
+    
+    <style type = "text/css">
+        h2{position:fixed; left:1010px; top:50px;font: 20px Tahoma; fill:black}
+        h3{position:fixed; left:1070px; top:86px;font: 20px Tahoma; fill:black}
+        h4{position:fixed; left:1070px; top:120px;font: 20px Tahoma; fill:black}
+        h5{position:fixed; left:1060px; top:-25px;font: 25px Tahoma; fill:black}
+        div.legend {
+            position:fixed;
+            left:1000px;
+            top: 60px;
+            width: 220px;
+            height: 100px;
+            padding: 10px;
+            border: 1px solid gray;
+            margin: 0;
+        }
+        .previouspage{position:fixed;fill:rgb(226, 226, 226);cursor:pointer;}
+        .Goback{position:fixed;font: 16px Tahoma; fill:black}
+        .title{position:fixed;font: 25px Tahoma;fill:black}
+        .dot1 {
+            position:fixed;
+            left:1010px;
+            top:110px;
+            height: 20px;
+            width: 20px;
+            background-color: #ad2627;
+            border-radius: 50%;
+            display: inline-block;
+        }
+        .dot12 {
+            position:fixed;
+            left:1035px;
+            top:110px;
+            height: 20px;
+            width: 20px;
+            background-color: #941A27;
+            border-radius: 50%;
+            display: inline-block;
+        }
+        .dot2 {
+            position:fixed;
+            left:1010px;
+            top:150px;
+            height: 20px;
+            width: 20px;
+            background-color: #2ab038;
+            border-radius: 50%;
+            display: inline-block;
+        }
+        .dot22 {
+            position:fixed;
+            left:1035px;
+            top:150px;
+            height: 20px;
+            width: 20px;
+            background-color: #38622F;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        img{
+            position:fixed;
+            top:15px;
+            left:1000px;
+        }
+    </style>
+        
+        
+    <div class="bubbletree-wrapper">
+        <div class="bubbletree"></div>
+    </div>
+
+    <div id="chartdiv"></div>
+
+    <style>
+        #chartdiv {
+            margin-top:0%;
+            width: 20%;
+            height: 150px;
+        }
+    </style>
+
+    <div class = "legend">
+        <h2> Legend: </h2>
+        <span class="dot1"></span>
+        <span class="dot12"></span>
+        <span class="dot2"></span>
+        <span class="dot22"></span>
+        <h3>Negative Values</h3>
+        <h4>Positive Values</h4>
+        <h5>DBS</h5>
+    </div>
+
+    <img src = "1920px-Flag_of_Singapore.png" style = "height:32px">
+
+
+
+</body>
+</html>

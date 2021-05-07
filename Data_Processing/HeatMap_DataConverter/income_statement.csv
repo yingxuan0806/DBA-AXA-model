@@ -1,0 +1,44 @@
+,id,name,country coefficient,value
+1,AE,United Arab Emirates,-0.1839,0.8118
+2,AT,Austria,-0.263,0.7327
+3,AU,Australia,0.1645,1.1602
+4,BE,Belgium,-0.0788,0.9169
+5,CA,Canada,-0.0167,0.979
+6,CH,Switzerland,0.2751,1.2708
+7,CN,China,-0.296,0.6997
+8,CZ,Czech Republic,-0.0593,0.9364
+9,DE,Germany,-0.1706,0.8251
+10,DK,Denmark,0.2316,1.2273
+11,EG,Egypt,-0.3039,0.6918
+12,ES,Spain,-0.1063,0.8894
+13,FI,Finland,0.1499,1.1456
+14,FR,France,-0.1484,0.8473
+15,GB,United Kingdom,-0.0976,0.8981
+16,GR,Greece,-0.1842,0.8115
+17,HK,Hong Kong,-0.2657,0.73
+18,HU,Hungary,-0.1385,0.8572
+19,ID,Indonesia,0.0143,1.01
+20,IE,Ireland,0.068,1.0637
+21,IL,Israel,-0.1109,0.8848
+22,IN,India,0.0475,1.0432
+23,IT,Italy,-0.2573,0.7384
+24,JO,Jordan,-0.2994,0.6963
+25,KR,Korea,-0.3481,0.6476
+26,LU,Luxembourg,-0.206,0.7897
+27,MY,Malaysia,-0.0566,0.9391
+28,NL,Netherlands,0.1081,1.1038
+29,NO,Norway,-0.0463,0.9494
+30,NZ,New Zealand,0.2383,1.234
+31,PH,Philippines,-0.108,0.8877
+32,PL,Poland,-0.2363,0.7594
+33,PT,Portugal,-0.0778,0.9179
+34,QA,Qatar,0.1258,1.1215
+35,RU,Russia,-0.4474,0.5483
+36,SA,Saudi Arabia,0.2777,1.2734
+37,SE,Sweden,0.0832,1.0789
+38,SG,Singapore,-0.1634,0.8323
+39,TH,Thailand,0.0987,1.0944
+40,TR,Turkey,-0.3534,0.6423
+41,TW,Taiwan,0.0131,1.0088
+42,US,United States,0.1726,1.1683
+43,ZA,South Africa,-0.0807,0.915

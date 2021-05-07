@@ -1,0 +1,138 @@
+[
+  {
+    "label": "cash",
+    "amount": 0.274
+  },
+  {
+    "label": "government_security",
+    "amount": 0.255
+  },
+  {
+    "label": "other_security",
+    "amount": -1.025
+  },
+  {
+    "label": "plant_net",
+    "amount": -0.04
+  },
+  {
+    "label": "loans_consumer",
+    "amount": -0.039
+  },
+  {
+    "label": "loans_commercial",
+    "amount": -0.31
+  },
+  {
+    "label": "loans_mortgage",
+    "amount": 0.245
+  },
+  {
+    "label": "loans_other",
+    "amount": -0.364
+  },
+  {
+    "label": "loan_loss_reserve_asset",
+    "amount": -0.004
+  },
+  {
+    "label": "non_performing_assets",
+    "amount": -0.23
+  },
+  {
+    "label": "invest_property",
+    "amount": 0
+  },
+  {
+    "label": "investment_in_subsidiaries_securities",
+    "amount": 0.007
+  },
+  {
+    "label": "other_intangibles",
+    "amount": -0.185
+  },
+  {
+    "label": "assets_sundry",
+    "amount": -0.065
+  },
+  {
+    "label": "intermediation",
+    "amount": -1.181
+  },
+  {
+    "label": "special_items_history",
+    "amount": 0.007
+  },
+  {
+    "label": "extraordinary_items_hist",
+    "amount": 0
+  },
+  {
+    "label": "deposits_demand",
+    "amount": -1.145
+  },
+  {
+    "label": "deposits_savings",
+    "amount": -3.724
+  },
+  {
+    "label": "debt_in_current_liability",
+    "amount": -9.14
+  },
+  {
+    "label": "income_tax_payable",
+    "amount": -0.207
+  },
+  {
+    "label": "provisional_other",
+    "amount": -0.087
+  },
+  {
+    "label": "sundry_long_term_liabilities",
+    "amount": -0.446
+  },
+  {
+    "label": "debt_other_longterm",
+    "amount": -5.644
+  },
+  {
+    "label": "deferred_tax_liability",
+    "amount": 0.046
+  },
+  {
+    "label": "minority_interest_bs",
+    "amount": -0.281
+  },
+  {
+    "label": "ordinary_capt_book",
+    "amount": 0.122
+  },
+  {
+    "label": "treasury_stock_lb",
+    "amount": 0
+  },
+  {
+    "label": "retained_earnings",
+    "amount": 0.193
+  },
+  {
+    "label": "unrealized_gain",
+    "amount": 0.02
+  },
+  {
+    "label": "equity_reserves_other",
+    "amount": -0.002
+  },
+  {
+    "label": "book_earnings_xtrp",
+    "amount": 0.464
+  },
+  {
+    "label": "book_dividend_xtrp",
+    "amount": -0.217
+  },
+  {
+    "label": "book_quality_growth",
+    "amount": 10.517
+  }
+]
